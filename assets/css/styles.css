@@ -1,3 +1,77 @@
-.ejemplo{
-    color:red;
+input:focus {
+    outline-offset: 0px !important;
+    outline: 0px !important;
+}
+
+.navbar-extends{
+    justify-content:flex-start !important;
+}
+.navbar-description{
+    padding: 0px;
+    margin: 0px 12px;
+}
+.navbar-brand-extends{
+    display: flex;
+    padding: 0px;
+    margin-bottom: -10px;
+}
+.navbar-text-extends{
+    padding: 0px;
+    font-size: 12px;
+    color: #6cec1d !important;
+}
+.navbar-toggle-extends{
+    border: 0px;
+    padding: 5px;
+    margin: 0px;
+    color: white;
+    margin-left: -8px;
+}
+.navbar-toggle-extends:hover {
+    background-color: grey;
+    padding: 5px;
+}
+.navbar-toggle-extends:focus {
+    outline: 0px !important;
+}
+.navbar-toggler-icon-extends{
+    font-size: 15px !important;
+}
+.navbar-search{
+    background-color: white;
+    border: 1px solid white;
+    border-radius: 4px
+}
+.input-search{
+    border: 0px;
+    padding: 6px;
+    width: 270px;
+}
+.icon-search{
+    padding: 0px 7px;
+    font-size: 22px;
+}
+.close-seach{
+    padding: 0px 6px;
+    font-size: 21px;
+}
+.hiden-input{
+    display: contents;
+     /* display: none; */
+}
+.btn-extends{
+    border-radius: 5px;
+    color: white;
+    padding: 6px 10px;
+}
+.btn-extends:hover{
+    background-color: white;
+    color: black;
+}
+.navbar-buttons{
+    position: absolute;
+    right: 22px;
+}
+.btn-cuenta{
+    background-color: grey;
 }
