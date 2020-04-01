@@ -1,8 +1,10 @@
+body{
+    background-color: #34393e;
+}
 input:focus {
     outline-offset: 0px !important;
     outline: 0px !important;
 }
-
 .navbar-extends{
     justify-content:flex-start !important;
 }
@@ -37,7 +39,7 @@ input:focus {
 .navbar-toggler-icon-extends{
     font-size: 15px !important;
 }
-.navbar-search{
+.navbar-search {
     background-color: white;
     border: 1px solid white;
     border-radius: 4px
@@ -57,7 +59,7 @@ input:focus {
 }
 .hiden-input{
     display: contents;
-     /* display: none; */
+    /* display: none; */
 }
 .btn-extends{
     border-radius: 5px;
@@ -74,4 +76,85 @@ input:focus {
 }
 .btn-cuenta{
     background-color: grey;
+}
+.article-carousel{
+    padding: 0px 0px;
+    width: 94%;
+    height: 22vw;
+    overflow: hidden;
+    border-radius: 15px;
+    margin: 0px 13px;
+}
+.img-article-carousel{
+    filter: brightness(0.5);
+}
+.title-article{
+    position: absolute;
+    top: 12px;
+    background-color: black;
+    color: white;
+    padding: 3px 6px 3px 19px;
+    font-size: 21px;
+    border-radius: 0px 5px 5px 0px;
+    text-transform: uppercase;
+    z-index: 1;
+}
+.carousel-extends{
+    background-color: #343a40;
+    padding: 5px;
+    margin: 4px 0px;
+}
+.sub-title{
+    color: white;
+    position: absolute;
+    padding: 33% 0px 3% 15px;
+    bottom: 0;
+}
+.sub-title h2 {
+    text-transform: uppercase;
+    font-size: 22px;
+    font-weight: bold;
+}
+.sub-title span{
+    font-size: 14px;
+    font-weight: 400;
+}
+.carousel{
+    margin: 7px 0px;
+}
+@media screen and (max-width: 700px){
+    .article-carousel {
+        margin: 0px 20px;
+        height: 41vw;
+    }
+}
+@media screen and (max-width: 900px){
+    .sub-title h2 {
+        font-size: 18px;
+    }
+    .sub-title span{
+        font-size: 12px;
+    }
+}
+
+@supports(object-fit: cover){
+    .img-url img{
+        height: 125%;
+        object-fit: cover;
+        object-position: center;
+        position: absolute;
+    }
+}
+/* ***************************************+ */
+.cS-hidden {
+    height: 1px;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    overflow: hidden;
+}
+.lSAction > .lSNext {
+    right: 25px !important;
+}
+.lSAction > .lSPrev {
+    left: 25px !important;
 }

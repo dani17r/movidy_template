@@ -1,112 +1,102 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-    <head>
-        <meta charset="utf-8">
-        <title>Movidy template</title>
-        <!-- Links -->
-        <link rel="stylesheet" href="assets/libs/bootstrap/css/bootstrap.min.css">
-        <link rel="stylesheet" href="assets/libs/material/material-icons.css">
-        <link rel="stylesheet" href="assets/css/styles.css">
-    </head>
-    <body>
-        <header>
-            <nav class="navbar navbar-dark bg-dark navbar-extends">
-                <button class="navbar-toggler navbar-toggle-extends"
-                    type="button" data-toggle="collapse" aria-expanded="false"
-                    data-target="#navbarToggleExternalContent"
-                    aria-controls="navbarToggleExternalContent"
-                    aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon navbar-toggler-icon-extends"></span>
-                </button>
-                <div class="navbar-description">
-                    <a class="navbar-brand navbar-brand-extends" href="#">Movidy</a>
-                    <span class="navbar-text navbar-text-extends">Quedate en casa</span>
-                </div>
-                <div class="form-inline navbar-search">
-                    <i class="material-icons icon-search">search</i>
-                    <div class="hiden-input">
-                        <input class="input-search" autocomplete="off" type="search" maxlength="40" placeholder="Buscador...">
-                        <i class="material-icons close-seach">close</i>
-                    </div>
-                </div>
-                <div class="btn-group navbar-buttons" role="group">
-                    <button class="btn btn-sm btn-outline-secondary btn-extends"
-                        type="button">Iniciar sesión</button>
-                    <button class="btn btn-sm btn-outline-secondary btn-extends btn-cuenta"
-                        type="button">Crear cuenta</button>
-                </div>
-            </nav>
-        </header>
-        <body>
-            <div id="movidyCarrusel" style="display: block;" items="2">
-            <span class="carrPrev" onclick="prevC(this, 0, 0);" style="cursor: no-drop;opacity: 0.6;"><i class="material-icons">chevron_left</i></span>
-            <div id="ContentDay" class="contenedorCarrusel" style="width: 2676px;margin-left:-0px;"><article class="Item" style="width: 436px;margin: 0 10px 0 0;">
-        				<div class="articleItem">
-        					<a href="https://movidy.co/series/s79622-ver-hunters-online" up-target="body">
-        						<span>Estreno Amazon</span>
-        						<div class="loadBoxInfo"></div><img src="https://image.tmdb.org/t/p/w780/mmI8JQJ9Du1hUNFS1iFKv2ltlz3.jpg"><div class="hideItems">
-        							<h2>Hunters</h2>
-        							<span><b>Drama - Crimen</b></span>
-        						</div>
-        					</a>
-        				</div>
-        			</article><article class="Item" style="width: 446.5px;">
-        				<div class="articleItem">
-        					<a href="https://movidy.co/series/s81356-ver-sex-education-online" up-target="body">
-        						<span>Estreno Netflix</span>
-        						<div class="loadBoxInfo"></div><img src="https://image.tmdb.org/t/p/w780/u23G9KZregWHs1use6ir1fX27gl.jpg"><div class="hideItems">
-        							<h2>Sex Education</h2>
-        							<span><b>Temporada 2 disponible</b></span>
-        						</div>
-        					</a>
-        				</div>
-        			</article><article class="Item" style="width: 436px;margin: 0 10px 0 0;">
-        				<div class="articleItem">
-        					<a href="https://movidy.co/series/s80752-ver-see-online" up-target="body">
-        						<span>Estreno Apple</span>
-        						<div class="loadBoxInfo"></div><img src="https://image.tmdb.org/t/p/w780/b2ZxtdXcpyI1LhVdiABbJOz2Yph.jpg"><div class="hideItems">
-        							<h2>See</h2>
-        							<span><b>Episodio 8 disponible</b></span>
-        						</div>
-        					</a>
-        				</div>
-        			</article><article class="Item" style="width: 446.5px;">
-        				<div class="articleItem">
-        					<a href="https://movidy.co/series/s82856-ver-the-mandalorian-online" up-target="body">
-        						<span>Estreno Disney +</span>
-        						<div class="loadBoxInfo"></div><img src="https://image.tmdb.org/t/p/w780/v36aZwxTsPAvqsssLPVno3VFvg5.jpg"><div class="hideItems">
-        							<h2>The Mandalorian</h2>
-        							<span><b>Episodio 8 disponible</b></span>
-        						</div>
-        					</a>
-        				</div>
-        			</article><article class="Item" style="width: 436px;margin: 0 10px 0 0;">
-        				<div class="articleItem">
-        					<a href="https://movidy.co/series/s79242-ver-las-escalofriantes-aventuras-de-sabrina-online" up-target="body">
-        						<span>Estreno Netflix</span>
-        						<div class="loadBoxInfo"></div><img src="https://image.tmdb.org/t/p/w780/pv5j9lzsuJpHtskk7NZ5wa3QEoI.jpg"><div class="hideItems">
-        							<h2>Las escalofriantes aventuras de Sabrina</h2>
-        							<span><b>Temporada 3 disponible</b></span>
-        						</div>
-        					</a>
-        				</div>
-        			</article><article class="Item" style="width: 446.5px;">
-        				<div class="articleItem">
-        					<a href="https://movidy.co/series/s71225-ver-las-chicas-del-cable-online" up-target="body">
-        						<span>Estreno Netflix</span>
-        						<div class="loadBoxInfo"></div><img src="https://image.tmdb.org/t/p/w780/xCWBhiM4j3PzbinbhHb3ddeFfjb.jpg"><div class="hideItems">
-        							<h2>Las chicas del cable</h2>
-        							<span><b>Temporada 5 disponible</b></span>
-        						</div>
-        					</a>
-        				</div>
-        			</article></div>
-        	<span class="carrNext" onclick="nextC(this, 2);" style=""><i class="material-icons">keyboard_arrow_right</i></span>
+<head>
+    <meta charset="utf-8">
+    <title>Movidy template</title>
+    <!-- Links -->
+    <link rel="stylesheet" href="assets/libs/material/material-icons.css">
+    <link rel="stylesheet" href="assets/libs/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/lightslider.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-dark bg-dark navbar-extends">
+            <button class="navbar-toggler navbar-toggle-extends"
+            type="button" data-toggle="collapse" aria-expanded="false"
+            data-target="#navbarToggleExternalContent"
+            aria-controls="navbarToggleExternalContent"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon navbar-toggler-icon-extends"></span>
+        </button>
+        <div class="navbar-description">
+            <a class="navbar-brand navbar-brand-extends" href="#">Movidy</a>
+            <span class="navbar-text navbar-text-extends">Quedate en casa</span>
         </div>
-        </body>
-        <!-- Js -->
-        <script src="assets/js/jquery-3.4.1.min.js" charset="utf-8"></script>
-        <script src="assets/libs/bootstrap/js/bootstrap.min.js" charset="utf-8"></script>
-        <script src="assets/js/custom.js" charset="utf-8"></script>
-    </body>
+        <div class="form-inline navbar-search">
+            <i class="material-icons icon-search">search</i>
+            <div class="hiden-input">
+                <input class="input-search" autocomplete="off" type="search" maxlength="40" placeholder="Buscador...">
+                <i class="material-icons close-seach">close</i>
+            </div>
+        </div>
+        <div class="btn-group navbar-buttons" role="group">
+            <button class="btn btn-sm btn-outline-secondary btn-extends"
+            type="button">Iniciar sesión</button>
+            <button class="btn btn-sm btn-outline-secondary btn-extends btn-cuenta"
+            type="button">Crear cuenta</button>
+        </div>
+    </nav>
+</header>
+<section class="carousel">
+    <ul id="autoWidth" class="cs-hidden">
+        <li class="item-a">
+            <article class="col article-carousel">
+                <span class="title-article">Estreno neflix</span>
+                    <img src="https://image.tmdb.org/t/p/w780/wLqhEDVwXwyoWBGtRw5qX2LmZh2.jpg" class="w-100 img-article-carousel">
+                <div class="sub-title">
+                    <h2>The Mandalorian</h2>
+                    <span><b>Servidor Mystream añadido</b></span>
+                </div>
+            </article>
+        </li>
+        <li class="item-b">
+            <article class="col article-carousel">
+                <span class="title-article" >Estreno</span>
+                <img src="https://image.tmdb.org/t/p/w780/aq2yEMgRQBPfRkrO0Repo2qhUAT.jpg" class="w-100 img-article-carousel">
+                <div class="sub-title">
+                    <h2>Esta mierda me supera</h2>
+                    <span><b>Drama - Comedia</b></span>
+                </div>
+            </article>
+        </li>
+        <li class="item-c">
+            <article class="col article-carousel">
+                <span class="title-article" >Estreno</span>
+                <img src="https://image.tmdb.org/t/p/w780/o0PtXGp2XyoRu0S1uPYzDpMnkOM.jpg" class="w-100 img-article-carousel">
+                <div class="sub-title">
+                    <h2>Esta mierda me supera</h2>
+                    <span><b>Drama - Comedia</b></span>
+                </div>
+            </article>
+        </li>
+        <li class="item-d">
+            <article class="col article-carousel">
+                <span class="title-article">Estreno neflix</span>
+                <img src="https://image.tmdb.org/t/p/w780/7PYAUaJzzUVxS4xiJHFe338vJd1.jpg" class="w-100 img-article-carousel">
+                <div class="sub-title">
+                    <h2>The Mandalorian</h2>
+                    <span><b>Servidor Mystream añadido</b></span>
+                </div>
+            </article>
+        </li>
+        <li class="item-e">
+            <article class="col article-carousel">
+                <span class="title-article">Estreno neflix</span>
+                <img src="https://image.tmdb.org/t/p/w780/n8jUeY2fkzRzwvz1AxiCe67JzjF.jpg" class="w-100 img-article-carousel">
+                <div class="sub-title">
+                    <h2>The Mandalorian</h2>
+                    <span><b>Servidor Mystream añadido</b></span>
+                </div>
+            </article>
+        </li>
+    </ul>
+</section>
+
+<!-- Js -->
+<script src="assets/js/jquery-3.4.1.min.js" charset="utf-8"></script>
+<script src="assets/libs/bootstrap/js/bootstrap.min.js" charset="utf-8"></script>
+<script src="assets/js/lightslider.js" charset="utf-8"></script>
+<script src="assets/js/custom.js" charset="utf-8"></script>
+</body>
 </html>
