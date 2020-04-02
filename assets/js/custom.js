@@ -7,8 +7,7 @@ $(function() {
         pager:false,
         enableDrag: false,
         keyPress:true,
-        // verticalHeight:300,
-        slideMargin:-14,
+        slideMargin:-6,
         onSliderLoad: function() {
             $('#autoWidth').removeClass('cS-hidden')
         },
@@ -17,9 +16,6 @@ $(function() {
                 breakpoint:700,
                 settings: {
                     item:1,
-                    // verticalHeight:500,
-                    // slideMove:1,
-                    // slideMargin:6,
                   }
             },
         ]
