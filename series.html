@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700" rel="stylesheet">
+    <link rel="stylesheet" href="assets/libs/material/material-icons.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <script src="assets/js/custom.js"></script>
+</head>
+
+<body style="overflow-x: hidden;" up-source="https://movidy.co:/series" class="">
+    <div class="cargaAjax"></div>
+    <div id="notc"></div>
+    <header>
+        <div class="fndo_Mo" onclick="fndo_Mo(this);"></div>
+        <div class="boton_mov" onclick="meN_Mo();"><i class="material-icons">menu</i></div>
+
+        <a href="https://movidy.co" class="Logo_dd" style="
+        margin: -1px 0 0 15px;
+        font-size: 26px;
+        ">movidy<p style="
+        font-size: 11px;
+        margin: 0;
+        color: #a5eb54;
+        ">QUÉDATE EN CASA</p></a>
+
+        <nav class="NavMob">
+            <div class="centerMb">
+                <a href="inicio.html">Discover</a>
+                <a href="series.html" class="nav-A">Series</a>
+                <a href="#">Peliculas</a>
+                <a href="listas.html">Listas</a>
+            </div>
+        </nav>
+
+        <div class="searchMob" onclick="seac_Mo();"><i class="material-icons"></i></div>
+        <form class="seMobF" method="get" action="https://movidy.co/search">
+
+            <div id="InFrag">
+                <i class="material-icons"></i>
+                <input name="go" autocomplete="off" spellcheck="false" id="autoseach" type="text" onkeyup="liveSearch(event, 0)" onpaste="setTimeout('liveSearch(event, 2)', 100)" maxlength="40" placeholder="Buscador..." value="">
+                <i class="material-icons closeSeach" onclick="cseac_Mo();">close</i>
+                <div class="listSearch"></div>
+            </div>
+
+        </form>
+        <div class="userOff">
+            <a href="https://movidy.co/login">Iniciar<b> sesión</b></a>
+            <a href="https://movidy.co/register">Crear<b> cuenta</b></a>
+        </div>
+    </header>
+
+    <div id="myList"></div>
+
+    <div class="menuIndexF">
+        <span>
+            <nav>
+                <a href="https://movidy.co/series/novedades"><i class="material-icons">whatshot</i> Nuevos Episodios</a>
+                <a href="https://movidy.co/series" class="NL_A"><i class="material-icons">select_all</i> Catalogo</a>
+                <div class="filtro " onclick="filter(this);"><i class="material-icons">tune</i></div>
+            </nav>
+        </span>
+    </div>
+    <div id="filterInsert">
+        <div class="boxFilter">
+            <div id="Acciones">
+                <div id="cadenota" section="series" genero="" year=""></div>
+                <ul class="Ageneros">
+                    <li onclick="cfilter(this, 'Acción', 1);"><img src="https://movidy.co/static/img/genres/action.svg"><b>Acción</b></li>
+                    <li onclick="cfilter(this, 'Animación', 1);"><img src="https://movidy.co/static/img/genres/animation.svg"><b>Animación</b></li>
+                    <li onclick="cfilter(this, 'Misterio', 1);"><img src="https://movidy.co/static/img/genres/mystere.svg"><b>Misterio</b></li>
+                    <li onclick="cfilter(this, 'Bélica', 1);"><img src="https://movidy.co/static/img/genres/guerre.svg"><b>Bélica</b></li>
+                    <li onclick="cfilter(this, 'Ciencia ficción', 1);"><img src="https://movidy.co/static/img//genres/science-fiction.svg"><b>Ciencia ficción</b></li>
+                    <li onclick="cfilter(this, 'Comedia', 1);"><img src="https://movidy.co/static/img/genres/comedie.svg"><b>Comedia</b></li>
+                    <li onclick="cfilter(this, 'Crimen', 1);"><img src="https://movidy.co/static/img/genres/policier.svg"><b>Crimen</b></li>
+                    <li onclick="cfilter(this, 'Drama', 1);"><img src="https://movidy.co/static/img/genres/drame.svg"><b>Drama</b></li>
+                    <li onclick="cfilter(this, 'Suspense', 1);"><img src="https://movidy.co/static/img/genres/suspense.svg"><b>Suspense</b></li>
+                    <li onclick="cfilter(this, 'Familia', 1);"><img src="https://movidy.co/static/img/genres/famille.svg"><b>Familia</b></li>
+                    <li onclick="cfilter(this, 'Música', 1);"><img src="https://movidy.co/static/img/genres/musical.svg"><b>Música</b></li>
+                    <li onclick="cfilter(this, 'Romance', 1);"><img src="https://movidy.co/static/img/genres/romance.svg"><b>Romance</b></li>
+                    <li onclick="cfilter(this, 'Terror', 1);"><img src="https://movidy.co/static/img/genres/horreur.svg"><b>Terror</b></li>
+                    <li onclick="cfilter(this, 'Wester', 1);"><img src="https://movidy.co/static/img/genres/aventure.svg"><b>Western</b></li>
+                </ul>
+
+                <ul class="Ayears Ageneros">
+                    <li onclick="cfilter(this, 2019, 2);" class="">2019</li>
+                    <li onclick="cfilter(this, 2018, 2);" class="">2018</li>
+                    <li onclick="cfilter(this, 2017, 2);" class="">2017</li>
+                    <li onclick="cfilter(this, 2016, 2);" class="">2016</li>
+                    <li onclick="cfilter(this, 2015, 2);">2015</li>
+                    <li onclick="cfilter(this, 2014, 2);">2014</li>
+                    <li onclick="cfilter(this, 2013, 2);">2013</li>
+                    <li onclick="cfilter(this, 2012, 2);">2012</li>
+                    <li onclick="cfilter(this, 2011, 2);">2011</li>
+                    <li onclick="cfilter(this, 2010, 2);">2010</li>
+                    <li onclick="cfilter(this, 2009, 2);">2009</li>
+                    <li onclick="cfilter(this, 2008, 2);">2008</li>
+                    <li onclick="cfilter(this, 2007, 2);">2007</li>
+                    <li onclick="cfilter(this, 2006, 2);">2006</li>
+                    <li onclick="cfilter(this, 2005, 2);">2005</li>
+                    <input type="text" name="theyear" placeholder="1985" onclick="cfilter(this);">
+                </ul>
+
+                <div class="selDf">
+                    <div id="filtrar">Filtrar series</div>
+                    <div id="contadorFiltro" cantidad="">Has seleccionado 0 elemento</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="movidyMain" class="xDwHead" genr="" yers="" idtype="series">
+        <article class="Cards carPerf">
+            <a href="serieOne.html">
+                <div class="CPoster"><img src="https://image.tmdb.org/t/p/w300/A4uh92nSommxHUkEKoeNH6I53dO.jpg" alt="Home Before Dark - Las cronicas de Hilde Lisko" title="Home Before Dark - Las cronicas de Hilde Lisko">
+                </div>
+
+                <div class="CInfo noHidetho">
+                    <p>2020</p>
+                    <h2>Home Before Dark - Las cronicas de Hilde Lisko</h2><span><b>Misterio</b><b>Drama</b></span>
+                </div>
+
+                <span class="Cborder"></span>
+            </a>
+        </article>
+        <article class="Cards carPerf">
+            <a href="serieOne.html">
+                <div class="CPoster"><img src="https://image.tmdb.org/t/p/w300/nDcCDesRRavcr5D4MpydMrN5RMz.jpg" alt="Tales from the Loop" title="Tales from the Loop">
+                </div>
+
+                <div class="CInfo noHidetho">
+                    <p>2020</p>
+                    <h2>Tales from the Loop</h2><span><b>Drama</b><b>Misterio</b><b>Ciencia ficción</b></span>
+                </div>
+
+                <span class="Cborder"></span>
+            </a>
+        </article>
+        <article class="Cards carPerf">
+            <a href="serieOne.html">
+                <div class="CPoster"><img src="https://image.tmdb.org/t/p/w300/s83DmhvDxeVPu4x4ZpLQ3KmGe0K.jpg" alt="Vagrant Queen" title="Vagrant Queen">
+                </div>
+
+                <div class="CInfo noHidetho">
+                    <p>2020</p>
+                    <h2>Vagrant Queen</h2><span><b>Ciencia ficción</b></span>
+                </div>
+
+                <span class="Cborder"></span>
+            </a>
+        </article>
+        <article class="Cards carPerf">
+            <a href="serieOne.html">
+                <div class="CPoster"><img src="https://image.tmdb.org/t/p/w300/nLqTH41tIi3J2EYmKrTcn5c0eqN.jpg" alt="High School Musical: El Musical: La Serie" title="High School Musical: El Musical: La Serie">
+                </div>
+
+                <div class="CInfo noHidetho">
+                    <p>2019</p>
+                    <h2>High School Musical: El Musical: La Serie</h2><span><b>Comedia</b><b>Drama</b><b>Familia</b></span>
+                </div>
+
+                <span class="Cborder"></span>
+            </a>
+        </article>
+        <article class="Cards carPerf">
+            <a href="serieOne.html">
+                <div class="CPoster"><img src="https://image.tmdb.org/t/p/w300/mdH0FbD328BIann1TPVwsPdCi0G.jpg" alt="Unorthodox" title="Unorthodox">
+                </div>
+
+                <div class="CInfo noHidetho">
+                    <p>2020</p>
+                    <h2>Unorthodox</h2><span><b>Drama</b></span>
+                </div>
+
+                <span class="Cborder"></span>
+            </a>
+        </article>
+        <article class="Cards carPerf">
+            <a href="serieOne.html">
+                <div class="CPoster"><img src="https://image.tmdb.org/t/p/w300/coW5qDTYHy5k7Akbe3QgD9qw8Dn.jpg" alt="Freud" title="Freud">
+                </div>
+
+                <div class="CInfo noHidetho">
+                    <p>2020</p>
+                    <h2>Freud</h2><span><b>Crimen</b><b>Drama</b><b>Misterio</b></span>
+                </div>
+
+                <span class="Cborder"></span>
+            </a>
+        </article>
+        <div class="pagMovidy">
+            <a href="#">Pagina siguiente <b>2</b></a>
+        </div>
+
+    </div>
+    <footer>
+        <b>© Movidy.co</b>
+        <a href="#">Política de Privacidad</a>
+        <a href="#">Condiciones de Uso</a>
+        <a href="#">DMCA</a>
+        <a href="#">Ganancias / contribución</a>
+    </footer>
+</body>
+
+</html>

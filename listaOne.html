@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700" rel="stylesheet">
+    <link rel="stylesheet" href="assets/libs/material/material-icons.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <script src="assets/js/custom.js"></script>
+</head>
+
+<body style="overflow-x: hidden;">
+    <div class="cargaAjax"></div>
+    <div id="notc"></div>
+    <header>
+        <div class="fndo_Mo" onclick="fndo_Mo(this);"></div>
+        <div class="boton_mov" onclick="meN_Mo();"><i class="material-icons">menu</i></div>
+
+        <a href="https://movidy.co" class="Logo_dd" style="
+        margin: -1px 0 0 15px;
+        font-size: 26px;
+        ">movidy<p style="
+        font-size: 11px;
+        margin: 0;
+        color: #a5eb54;
+        ">QUÉDATE EN CASA</p></a>
+
+        <nav class="NavMob">
+            <div class="centerMb">
+                <a href="inicio.html">Discover</a>
+                <a href="series.html">Series</a>
+                <a href="#">Peliculas</a>
+                <a href="listas.html">Listas</a>
+            </div>
+        </nav>
+
+        <div class="searchMob" onclick="seac_Mo();"><i class="material-icons">search</i></div>
+        <form class="seMobF" method="get" action="https://movidy.co/search">
+
+            <div id="InFrag">
+                <i class="material-icons">search</i>
+                <input name="go" autocomplete="off" spellcheck="false" id="autoseach" type="text" onkeyup="liveSearch(event, 0)" onpaste="setTimeout('liveSearch(event, 2)', 100)" maxlength="40" placeholder="Buscador..." value="">
+                <i class="material-icons closeSeach" onclick="cseac_Mo();">close</i>
+                <div class="listSearch"></div>
+            </div>
+
+        </form>
+        <div class="userOff">
+            <a href="#">Iniciar<b> sesión</b></a>
+            <a href="#">Crear<b> cuenta</b></a>
+        </div>
+    </header>
+
+    <div id="myList"></div>
+
+    <div id="movidyMain" class="inSingleList">
+        <div class="infoCard">
+            <h1>Universo Cinematográfico de Marvel (UCM)</h1>
+            <article>UCM. Ordenadas respecto a su fecha de estreno, no confundir con el orden cronológico de la historia.</article>
+
+            <a href="https://movidy.co/user/movidy" class="createdbyT kcdirs" up-target="body">
+                <div class="uAvatar"><img src="https://i.imgur.com/HD27z9M.png"></div>
+                <span>Movidy</span>
+            </a>
+            <div class="createdbyT">
+                <div class="uAvatar4"><i class="material-icons">favorite</i></div>
+                <span>925</span>
+            </div>
+
+        </div>
+        <article class="Cards">
+            <a href="https://movidy.co/peliculas/p429617-ver-spider-man-lejos-de-casa-online" up-target="body">
+                <div class="CPoster"><b class="tng2">Pelicula</b>
+                    <img src="https://image.tmdb.org/t/p/w300/iKVR1ba3W1wCm9bVCcpnNvxQUWX.jpg" alt="Spider-Man: Lejos de Casa" title="Spider-Man: Lejos de Casa">
+                </div>
+                <div class="CInfo">
+                    <p>2019</p>
+                    <h2>Spider-Man: Lejos de Casa</h2><span><b>Acción</b><b>Aventura</b><b>Ciencia ficción</b></span>
+                    <div class="downloadONF"><i class="material-icons">done</i></div>
+                </div>
+                <span class="Cborder"></span>
+            </a>
+        </article>
+        <article class="Cards">
+            <a href="https://movidy.co/peliculas/p299534-ver-vengadores-endgame-online" up-target="body">
+                <div class="CPoster"><b class="tng2">Pelicula</b>
+                    <img src="https://image.tmdb.org/t/p/w300/1ELa9bm6zxIADz8u71VZtvNzx3k.jpg" alt="Vengadores: Endgame" title="Vengadores: Endgame">
+                </div>
+                <div class="CInfo">
+                    <p>2019</p>
+                    <h2>Vengadores: Endgame</h2><span><b>Aventura</b><b>Ciencia ficción</b><b>Acción</b></span>
+                    <div class="downloadONF"><i class="material-icons">done</i></div>
+                </div>
+                <span class="Cborder"></span>
+            </a>
+        </article>
+        <article class="Cards">
+            <a href="https://movidy.co/peliculas/p299537-ver-capitana-marvel-online" up-target="body">
+                <div class="CPoster"><b class="tng2">Pelicula</b>
+                    <img src="https://image.tmdb.org/t/p/w300/lsQWAoT3IERwQkQNFTkIeZk2R1S.jpg" alt="Capitana Marvel" title="Capitana Marvel">
+                </div>
+                <div class="CInfo">
+                    <p>2019</p>
+                    <h2>Capitana Marvel</h2><span><b>Acción</b><b>Aventura</b><b>Ciencia ficción</b></span>
+                    <div class="downloadONF"><i class="material-icons">done</i></div>
+                </div>
+                <span class="Cborder"></span>
+            </a>
+        </article>
+        <article class="Cards">
+            <a href="https://movidy.co/peliculas/p363088-ver-ant-man-y-la-avispa-online" up-target="body">
+                <div class="CPoster"><b class="tng2">Pelicula</b>
+                    <img src="https://image.tmdb.org/t/p/w300/bvYI6i9lQ3bsup9PgnMF3YYr8ZR.jpg" alt="Ant-Man y la Avispa" title="Ant-Man y la Avispa">
+                </div>
+                <div class="CInfo">
+                    <p>2018</p>
+                    <h2>Ant-Man y la Avispa</h2><span><b>Acción</b><b>Aventura</b><b>Ciencia ficción</b><b>Comedia</b><b>Familia</b></span>
+                    <div class="downloadONF"><i class="material-icons">done</i></div>
+                </div>
+                <span class="Cborder"></span>
+            </a>
+        </article>
+        <article class="Cards">
+            <a href="https://movidy.co/peliculas/p299536-ver-vengadores-infinity-war-online" up-target="body">
+                <div class="CPoster"><b class="tng2">Pelicula</b>
+                    <img src="https://image.tmdb.org/t/p/w300/rDLmMzkaFMFWF1UnnlboMfifVXM.jpg" alt="Vengadores: Infinity War" title="Vengadores: Infinity War">
+                </div>
+                <div class="CInfo">
+                    <p>2018</p>
+                    <h2>Vengadores: Infinity War</h2><span><b>Aventura</b><b>Acción</b><b>Fantasía</b></span>
+                    <div class="downloadONF"><i class="material-icons">done</i></div>
+                </div>
+                <span class="Cborder"></span>
+            </a>
+        </article>
+        <article class="Cards">
+            <a href="https://movidy.co/peliculas/p284054-ver-black-panther-online" up-target="body">
+                <div class="CPoster"><b class="tng2">Pelicula</b>
+                    <img src="https://image.tmdb.org/t/p/w300/udd8VinUWwLIiTYn3wdOEpCk9Fq.jpg" alt="Black Panther" title="Black Panther">
+                </div>
+                <div class="CInfo">
+                    <p>2018</p>
+                    <h2>Black Panther</h2><span><b>Acción</b><b>Aventura</b><b>Fantasía</b><b>Ciencia ficción</b></span>
+                    <div class="downloadONF"><i class="material-icons">done</i></div>
+                </div>
+                <span class="Cborder"></span>
+            </a>
+        </article>
+        <article class="Cards">
+            <a href="https://movidy.co/peliculas/p284053-ver-thor-ragnarok-online" up-target="body">
+                <div class="CPoster"><b class="tng2">Pelicula</b>
+                    <img src="https://image.tmdb.org/t/p/w300/s7hV8HFh7w2EZ4GK5EiltRVvWJA.jpg" alt="Thor: Ragnarok" title="Thor: Ragnarok">
+                </div>
+                <div class="CInfo">
+                    <p>2017</p>
+                    <h2>Thor: Ragnarok</h2><span><b>Acción</b><b>Aventura</b><b>Comedia</b><b>Fantasía</b><b>Ciencia ficción</b></span>
+                    <div class="downloadONF"><i class="material-icons">done</i></div>
+                </div>
+                <span class="Cborder"></span>
+            </a>
+        </article>
+        <article class="Cards">
+            <a href="https://movidy.co/peliculas/p315635-ver-spider-man-homecoming-online" up-target="body">
+                <div class="CPoster"><b class="tng2">Pelicula</b>
+                    <img src="https://image.tmdb.org/t/p/w300/bRl6C6FwzTndk0MBGZZ68nRFlw3.jpg" alt="Spider-Man: Homecoming" title="Spider-Man: Homecoming">
+                </div>
+                <div class="CInfo">
+                    <p>2017</p>
+                    <h2>Spider-Man: Homecoming</h2><span><b>Acción</b><b>Aventura</b><b>Ciencia ficción</b><b>Drama</b></span>
+                    <div class="downloadONF"><i class="material-icons">done</i></div>
+                </div>
+                <span class="Cborder"></span>
+            </a>
+        </article>
+        <article class="Cards">
+            <a href="https://movidy.co/peliculas/p283995-ver-guardianes-de-la-galaxia-vol-2-online" up-target="body">
+                <div class="CPoster"><b class="tng2">Pelicula</b>
+                    <img src="https://image.tmdb.org/t/p/w300/kdg6Y06jfq9FV7qknWNcKLYtBJn.jpg" alt="Guardianes de la galaxia Vol. 2" title="Guardianes de la galaxia Vol. 2">
+                </div>
+                <div class="CInfo">
+                    <p>2017</p>
+                    <h2>Guardianes de la galaxia Vol. 2</h2><span><b>Acción</b><b>Aventura</b><b>Comedia</b><b>Ciencia ficción</b></span>
+                    <div class="downloadONF"><i class="material-icons">done</i></div>
+                </div>
+                <span class="Cborder"></span>
+            </a>
+        </article>
+        <article class="Cards">
+            <a href="https://movidy.co/peliculas/p284052-ver-doctor-strange-online" up-target="body">
+                <div class="CPoster"><b class="tng2">Pelicula</b>
+                    <img src="https://image.tmdb.org/t/p/w300/7OpmunCEZo93nyRIbx59QRaFvZz.jpg" alt="Doctor Strange" title="Doctor Strange">
+                </div>
+                <div class="CInfo">
+                    <p>2016</p>
+                    <h2>Doctor Strange</h2><span><b>Acción</b><b>Aventura</b><b>Fantasía</b><b>Ciencia ficción</b></span>
+                    <div class="downloadONF"><i class="material-icons">done</i></div>
+                </div>
+                <span class="Cborder"></span>
+            </a>
+        </article>
+        <article class="Cards">
+            <a href="https://movidy.co/peliculas/p271110-ver-capitan-america-civil-war-online" up-target="body">
+                <div class="CPoster"><b class="tng2">Pelicula</b>
+                    <img src="https://image.tmdb.org/t/p/w300/j3DXwoJwbFTqgBOfIWct8H3LYpr.jpg" alt="Capitan America: Civil War" title="Capitan America: Civil War">
+                </div>
+                <div class="CInfo">
+                    <p>2016</p>
+                    <h2>Capitan America: Civil War</h2><span><b>Aventura</b><b>Acción</b><b>Ciencia ficción</b></span>
+                    <div class="downloadONF"><i class="material-icons">done</i></div>
+                </div>
+                <span class="Cborder"></span>
+            </a>
+        </article>
+        <article class="Cards">
+            <a href="https://movidy.co/peliculas/p102899-ver-ant-man-online" up-target="body">
+                <div class="CPoster"><b class="tng2">Pelicula</b>
+                    <img src="https://image.tmdb.org/t/p/w300/ykb54BUxI1Jck37EbWBkAmbQV5.jpg" alt="Ant-Man" title="Ant-Man">
+                </div>
+                <div class="CInfo">
+                    <p>2015</p>
+                    <h2>Ant-Man</h2><span><b>Ciencia ficción</b><b>Acción</b><b>Aventura</b></span>
+                    <div class="downloadONF"><i class="material-icons">done</i></div>
+                </div>
+                <span class="Cborder"></span>
+            </a>
+        </article>
+        <article class="Cards">
+            <a href="https://movidy.co/peliculas/p99861-ver-vengadores-la-era-de-ultron-online" up-target="body">
+                <div class="CPoster"><b class="tng2">Pelicula</b>
+                    <img src="https://movidy.co/static/img/lazy.gif" data-echo="https://image.tmdb.org/t/p/w300/8ygaMl23nDY8ZYRemGhVBZEXWU4.jpg" alt="Vengadores: La era de Ultron" title="Vengadores: La era de Ultron">
+                </div>
+                <div class="CInfo">
+                    <p>2015</p>
+                    <h2>Vengadores: La era de Ultron</h2><span><b>Acción</b><b>Aventura</b><b>Ciencia ficción</b></span>
+                    <div class="downloadONF"><i class="material-icons">done</i></div>
+                </div>
+                <span class="Cborder"></span>
+            </a>
+        </article>
+        <article class="Cards">
+            <a href="https://movidy.co/peliculas/p118340-ver-guardianes-de-la-galaxia-online" up-target="body">
+                <div class="CPoster"><b class="tng2">Pelicula</b>
+                    <img src="https://movidy.co/static/img/lazy.gif" data-echo="https://image.tmdb.org/t/p/w300/9Ju7p4daJi5rcTUghYZxHlP15ia.jpg" alt="Guardianes de la galaxia" title="Guardianes de la galaxia">
+                </div>
+                <div class="CInfo">
+                    <p>2014</p>
+                    <h2>Guardianes de la galaxia</h2><span><b>Acción</b><b>Ciencia ficción</b><b>Aventura</b></span>
+                    <div class="downloadONF"><i class="material-icons">done</i></div>
+                </div>
+                <span class="Cborder"></span>
+            </a>
+        </article>
+        <article class="Cards">
+            <a href="https://movidy.co/peliculas/p100402-ver-capitan-america-el-soldado-de-invierno-online" up-target="body">
+                <div class="CPoster"><b class="tng2">Pelicula</b>
+                    <img src="https://movidy.co/static/img/lazy.gif" data-echo="https://image.tmdb.org/t/p/w300/frDK0kDcpIiRNlje1BlYqgesIJD.jpg" alt="Capitan America: El soldado de invierno" title="Capitan America: El soldado de invierno">
+                </div>
+                <div class="CInfo">
+                    <p>2014</p>
+                    <h2>Capitan America: El soldado de invierno</h2><span><b>Acción</b><b>Aventura</b><b>Ciencia ficción</b></span>
+                    <div class="downloadONF"><i class="material-icons">done</i></div>
+                </div>
+                <span class="Cborder"></span>
+            </a>
+        </article>
+        <article class="Cards">
+            <a href="https://movidy.co/peliculas/p76338-ver-thor-el-mundo-oscuro-online" up-target="body">
+                <div class="CPoster"><b class="tng2">Pelicula</b>
+                    <img src="https://movidy.co/static/img/lazy.gif" data-echo="https://image.tmdb.org/t/p/w300/lBDYEfyGMYgNUgBd036sXNm9LYO.jpg" alt="Thor: El mundo oscuro" title="Thor: El mundo oscuro">
+                </div>
+                <div class="CInfo">
+                    <p>2013</p>
+                    <h2>Thor: El mundo oscuro</h2><span><b>Acción</b><b>Aventura</b><b>Fantasía</b></span>
+                    <div class="downloadONF"><i class="material-icons">done</i></div>
+                </div>
+                <span class="Cborder"></span>
+            </a>
+        </article>
+        <article class="Cards">
+            <a href="https://movidy.co/peliculas/p68721-ver-iron-man-3-online" up-target="body">
+                <div class="CPoster"><b class="tng2">Pelicula</b>
+                    <img src="https://movidy.co/static/img/lazy.gif" data-echo="https://image.tmdb.org/t/p/w300/zVuLZbqoSzWLVDdUVKPLOgR8hD3.jpg" alt="Iron Man 3" title="Iron Man 3">
+                </div>
+                <div class="CInfo">
+                    <p>2013</p>
+                    <h2>Iron Man 3</h2><span><b>Acción</b><b>Aventura</b><b>Ciencia ficción</b></span>
+                    <div class="downloadONF"><i class="material-icons">done</i></div>
+                </div>
+                <span class="Cborder"></span>
+            </a>
+        </article>
+        <article class="Cards">
+            <a href="https://movidy.co/peliculas/p24428-ver-los-vengadores-online" up-target="body">
+                <div class="CPoster"><b class="tng2">Pelicula</b>
+                    <img src="https://movidy.co/static/img/lazy.gif" data-echo="https://image.tmdb.org/t/p/w300/rPyWt7IPREDWnE1U8V9iMFzeh0p.jpg" alt="Los vengadores" title="Los vengadores">
+                </div>
+                <div class="CInfo">
+                    <p>2012</p>
+                    <h2>Los vengadores</h2><span><b>Ciencia ficción</b><b>Acción</b><b>Aventura</b></span>
+                    <div class="downloadONF"><i class="material-icons">done</i></div>
+                </div>
+                <span class="Cborder"></span>
+            </a>
+        </article>
+        <article class="Cards">
+            <a href="https://movidy.co/peliculas/p1771-ver-capitan-america-el-primer-vengador-online" up-target="body">
+                <div class="CPoster"><b class="tng2">Pelicula</b>
+                    <img src="https://movidy.co/static/img/lazy.gif" data-echo="https://image.tmdb.org/t/p/w300/v6BxKeriiiNLSTdaiDdMcib3k8q.jpg" alt="Capitan America: El primer vengador" title="Capitan America: El primer vengador">
+                </div>
+                <div class="CInfo">
+                    <p>2011</p>
+                    <h2>Capitan America: El primer vengador</h2><span><b>Acción</b><b>Aventura</b><b>Ciencia ficción</b></span>
+                    <div class="downloadONF"><i class="material-icons">done</i></div>
+                </div>
+                <span class="Cborder"></span>
+            </a>
+        </article>
+        <article class="Cards">
+            <a href="https://movidy.co/peliculas/p10195-ver-thor-online" up-target="body">
+                <div class="CPoster"><b class="tng2">Pelicula</b>
+                    <img src="https://movidy.co/static/img/lazy.gif" data-echo="https://image.tmdb.org/t/p/w300/26WXrojPp63Nu2FzxYDAtO90APn.jpg" alt="Thor" title="Thor">
+                </div>
+                <div class="CInfo">
+                    <p>2011</p>
+                    <h2>Thor</h2><span><b>Aventura</b><b>Fantasía</b><b>Acción</b></span>
+                    <div class="downloadONF"><i class="material-icons">done</i></div>
+                </div>
+                <span class="Cborder"></span>
+            </a>
+        </article>
+        <article class="Cards">
+            <a href="https://movidy.co/peliculas/p10138-ver-iron-man-2-online" up-target="body">
+                <div class="CPoster"><b class="tng2">Pelicula</b>
+                    <img src="https://movidy.co/static/img/lazy.gif" data-echo="https://image.tmdb.org/t/p/w300/rZukjoZQKoxNylDVGslebCB5afI.jpg" alt="Iron Man 2" title="Iron Man 2">
+                </div>
+                <div class="CInfo">
+                    <p>2010</p>
+                    <h2>Iron Man 2</h2><span><b>Aventura</b><b>Acción</b><b>Ciencia ficción</b></span>
+                    <div class="downloadONF"><i class="material-icons">done</i></div>
+                </div>
+                <span class="Cborder"></span>
+            </a>
+        </article>
+        <article class="Cards">
+            <a href="https://movidy.co/peliculas/p1724-ver-el-increible-hulk-online" up-target="body">
+                <div class="CPoster"><b class="tng2">Pelicula</b>
+                    <img src="https://movidy.co/static/img/lazy.gif" data-echo="https://image.tmdb.org/t/p/w300/b5RJqUVaCvqj3ScEKrB9pp21asC.jpg" alt="El increible Hulk" title="El increible Hulk">
+                </div>
+                <div class="CInfo">
+                    <p>2008</p>
+                    <h2>El increible Hulk</h2><span><b>Ciencia ficción</b><b>Acción</b><b>Aventura</b></span>
+                    <div class="downloadONF"><i class="material-icons">done</i></div>
+                </div>
+                <span class="Cborder"></span>
+            </a>
+        </article>
+        <article class="Cards">
+            <a href="https://movidy.co/peliculas/p1726-ver-iron-man-online" up-target="body">
+                <div class="CPoster"><b class="tng2">Pelicula</b>
+                    <img src="https://movidy.co/static/img/lazy.gif" data-echo="https://image.tmdb.org/t/p/w300/2Ms5bJuHPPzSuMGogEwyQu0UF7t.jpg" alt="Iron Man" title="Iron Man">
+                </div>
+                <div class="CInfo">
+                    <p>2008</p>
+                    <h2>Iron Man</h2><span><b>Acción</b><b>Ciencia ficción</b><b>Aventura</b></span>
+                    <div class="downloadONF"><i class="material-icons">done</i></div>
+                </div>
+                <span class="Cborder"></span>
+            </a>
+        </article>
+        <div class="pagMovidy"></div>
+    </div>
+    <footer>
+        <b>© Movidy.co</b>
+        <a href="#">Política de Privacidad</a>
+        <a href="#">Condiciones de Uso</a>
+        <a href="#">DMCA</a>
+        <a href="#">Ganancias / contribución</a>
+    </footer>
+</body>
+
+</html>

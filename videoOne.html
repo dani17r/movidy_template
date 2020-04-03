@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700" rel="stylesheet">
+        <link rel="stylesheet" href="assets/libs/material/material-icons.css">
+        <link rel="stylesheet" href="assets/css/style.css">
+
+        <script src="assets/js/custom.js"></script>
+    </head>
+
+    <body style="overflow-x: hidden;">
+        <div class="cargaAjax"></div>
+        <div id="notc"></div>
+        <header>
+            <div class="fndo_Mo" onclick="fndo_Mo(this);"></div>
+            <div class="boton_mov" onclick="meN_Mo();"><i class="material-icons">menu</i></div>
+
+            <a href="https://movidy.co" class="Logo_dd" style="
+        margin: -1px 0 0 15px;
+        font-size: 26px;
+        ">movidy<p style="
+        font-size: 11px;
+        margin: 0;
+        color: #a5eb54;
+        ">QUÉDATE EN CASA</p></a>
+
+            <nav class="NavMob">
+                <div class="centerMb">
+                    <a href="inicio.html">Discover</a>
+                    <a href="series.html">Series</a>
+                    <a href="#">Peliculas</a>
+                    <a href="listas.html">Listas</a>
+                </div>
+            </nav>
+
+            <div class="searchMob" onclick="seac_Mo();"><i class="material-icons">search</i></div>
+            <form class="seMobF" method="get" action="https://movidy.co/search">
+
+                <div id="InFrag">
+                    <i class="material-icons">search</i>
+                    <input name="go" autocomplete="off" spellcheck="false" id="autoseach" type="text" onkeyup="liveSearch(event, 0)" onpaste="setTimeout('liveSearch(event, 2)', 100)" maxlength="40" placeholder="Buscador..." value="">
+                    <i class="material-icons closeSeach" onclick="cseac_Mo();">close</i>
+                    <div class="listSearch"></div>
+                </div>
+
+            </form>
+            <div class="userOff">
+                <a href="#">Iniciar<b> sesión</b></a>
+                <a href="#">Crear<b> cuenta</b></a>
+            </div>
+        </header>
+
+        <div id="myList"></div>
+
+        <div id="movidyMain">
+            <div id="movidyEpisode" class="Flex" style="display:table;" up-source="https://movidy.co:/series/s61056-ver-como-defender-a-un-asesino-online/6x10">
+                <div class="boxLateReport"></div>
+                <div class="InfoEp">
+                    <span class="inft">6 - 10</span>
+                    <h1>Episodio 10</h1><span class="inft1">2 Apr 2020</span>
+                    <article>Por ahora no tenemos ninguna descripción para el episodio <b>Episodio 10</b></article>
+                </div>
+
+                <div class="navEP"><a href="https://movidy.co/series/s61056-ver-como-defender-a-un-asesino-online/6x9" up-target=".Flex"><i class="material-icons">skip_previous</i> Anterior</a><a
+                        href="https://movidy.co/series/s61056-ver-como-defender-a-un-asesino-online" up-target="body"><i class="material-icons">list</i> temporadas</a><a style="display:none;"></a><span style="cursor: no-drop;opacity: 0.6;">Siguiente
+                        <i class="material-icons">skip_next</i></span></div>
+                <div class="navEP2">
+                    <li class="act_N" onclick="nep(this, 1);"><i class="material-icons">copyright</i> Oficial</li>
+                    <li onclick="nep(this, 2);"><i class="material-icons">link</i> Enlaces de usuarios <b>44</b></li>
+                </div>
+
+                <div class="contEP contepID_1 contEP_A">
+
+                    <style>
+                        #betaScan {
+                            background: #2a3849;
+                            border-radius: 5px;
+                            padding: 5px 0 5px 0;
+                            margin: 0 0 10px 0;
+                        }
+
+                        #betaScan p {
+                            background: #1d2733;
+                            margin: 0 5px 5px 5px;
+                            border-radius: 4px;
+                            padding: 10px 5px;
+                            text-align: center;
+                            font-size: 15px;
+                            color: #d4d4d4;
+                        }
+
+                        .optScan {
+                            display: flex;
+                        }
+
+                        .optScan a {
+                            width: 100%;
+                            text-align: center;
+                            background: #121921;
+                            color: #d7d5d5;
+                            padding: 15px 0;
+                            margin: 0 5px;
+                            border-radius: 5px;
+                            text-transform: uppercase;
+                            font-size: 14px;
+                        }
+
+                        .optScan a:hover {
+                            background: #070a0d;
+                        }
+
+                        .unicL {
+                            background: #1a67b9 !important;
+                            color: #fff !important;
+                            box-shadow: 0 1px 5px 0 #0000007a;
+                        }
+
+                        .unicL:hover {
+                            background: #207fe5 !important;
+                        }
+
+                        #ifr_compartido {
+                            position: relative;
+                            display: block;
+                            margin: 0 0 10px 0;
+                            overflow: hidden;
+                            border-radius: 4px;
+                            padding-bottom: 58%;
+                            border: 1px solid #ffffff21;
+                            background-image: linear-gradient(rgba(16, 16, 23, 0.71), #000000);
+                        }
+
+                        #ifr_compartido iframe {
+                            position: absolute;
+                            height: 100%;
+                        }
+
+                    </style>
+
+                    <div id="ifr_compartido">
+
+                    </div>
+                    <div id="Musica" class="noMusicid">
+                        <div class="noMusic"><span>No hay canciones o bandas sonoras disponibles por ahora</span></div>
+                        <h2>Canciones / Bandas sonoras</h2>
+                        <li></li>
+                        <li></li>
+                    </div>
+
+                </div>
+
+                <div class="contEP contepID_2">
+                </div>
+
+            </div>
+        </div>
+        <footer>
+            <b>© Movidy.co</b>
+            <a href="#">Política de Privacidad</a>
+            <a href="#">Condiciones de Uso</a>
+            <a href="#">DMCA</a>
+            <a href="#">Ganancias / contribución</a>
+        </footer>
+    </body>
+
+</html>

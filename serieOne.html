@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700" rel="stylesheet">
+    <link rel="stylesheet" href="assets/libs/material/material-icons.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <script src="assets/js/custom.js"></script>
+</head>
+
+<body style="overflow-x: hidden;">
+    <div class="cargaAjax"></div>
+    <div id="notc"></div>
+    <header>
+        <div class="fndo_Mo" onclick="fndo_Mo(this);"></div>
+        <div class="boton_mov" onclick="meN_Mo();"><i class="material-icons">menu</i></div>
+
+        <a href="https://movidy.co" class="Logo_dd" style="
+        margin: -1px 0 0 15px;
+        font-size: 26px;
+        ">movidy<p style="
+        font-size: 11px;
+        margin: 0;
+        color: #a5eb54;
+        ">QUÉDATE EN CASA</p></a>
+
+        <nav class="NavMob">
+            <div class="centerMb">
+                <a href="inicio.html">Discover</a>
+                <a href="series.html">Series</a>
+                <a href="#">Peliculas</a>
+                <a href="listas.html">Listas</a>
+            </div>
+        </nav>
+
+        <div class="searchMob" onclick="seac_Mo();"><i class="material-icons">search</i></div>
+        <form class="seMobF" method="get" action="https://movidy.co/search">
+
+            <div id="InFrag">
+                <i class="material-icons">search</i>
+                <input name="go" autocomplete="off" spellcheck="false" id="autoseach" type="text" onkeyup="liveSearch(event, 0)" onpaste="setTimeout('liveSearch(event, 2)', 100)" maxlength="40" placeholder="Buscador..." value="">
+                <i class="material-icons closeSeach" onclick="cseac_Mo();">close</i>
+                <div class="listSearch"></div>
+            </div>
+
+        </form>
+        <div class="userOff">
+            <a href="#">Iniciar<b> sesión</b></a>
+            <a href="#">Crear<b> cuenta</b></a>
+        </div>
+    </header>
+
+    <div id="myList"></div>
+
+    <div id="movidyMain" class="Flex" secid="s90260">
+
+        <div class="xBody">
+            <div class="storeSP">
+                <div class="nota"><i class="material-icons">whatshot</i>
+                    <span>5 <b>5</b></span></div>
+                </div>
+                <div class="Wallpaper" style="background-image: linear-gradient(rgba(41, 128, 185, 0), rgb(0, 0, 0)), url(https://image.tmdb.org/t/p/w780/8cM6uykL1juIuB9rIjs8J1vjtpC.jpg);"></div>
+
+                <div class="ConjuntoHeadCont">
+                    <div class="SingleHead"><img src="https://image.tmdb.org/t/p/w154/kf3yX0ILNlLJ42X3lX2iYJ3QRp6.jpg" alt="Esta mierda me supera" title="Esta mierda me supera"></div>
+                    <div class="SingleContent">
+                        <h1>Esta mierda me supera</h1>
+                        <div class="sts">
+                            <a href="https://movidy.co/series/filtro/Drama/," up-target="body">Drama</a><a href="https://movidy.co/series/filtro/Comedia/," up-target="body">Comedia</a><a href="https://movidy.co/series/filtro/,/2020"
+                            up-target="body">26 Feb 2020</a>
+                        </div>
+                    </div>
+                </div>
+
+                <article>Una chica atraviesa la vorágine de la escuela, la familia y la sexualidad con super(inoportunos)poderes. Basada en la novela gráfica de Charles Forsman.</article>
+                <style>
+                .socialB {
+                    float: left;
+                    background: #181821;
+                    margin: 10px 0 0 0;
+                    border-radius: 6px;
+                    width: 100%;
+                    width: -webkit-fill-available;
+                    display: flex;
+                    padding: 10px;
+                }
+
+                .socialB p {
+                    display: inline-block;
+                    font-size: 15px;
+                    color: #bbb;
+                    width: 80%;
+                    margin: 0 10px 0 0;
+                    text-align: center;
+                    background: #111116;
+                    border-radius: 6px;
+                    line-height: 2.5;
+                }
+
+                .socialB a {
+                    background: #0d74a2;
+                    padding: 9px 0 8px 0;
+                    border-radius: 6px;
+                    color: #fff;
+                    width: 25%;
+                    text-align: center;
+                }
+
+                .socialB a:last-child {
+                    background: #1e68c3;
+                    margin: 0 0 0 10px;
+                }
+
+                .socialB a:hover {
+                    background: #108fc7;
+                }
+
+                .socialB a:last-child:hover {
+                    background: #2277de;
+                }
+
+                @media screen and (max-width:1550px) {
+                    .socialB {
+                        display: block;
+                    }
+
+                    .socialB p {
+                        width: 100%;
+                        margin: 0 10px 10px 0;
+                    }
+
+                    .socialB a {
+                        width: 49%;
+                        display: inline-block;
+                    }
+
+                    .socialB a:last-child {
+                        margin: 0 0 0 1%;
+                    }
+                }
+
+                @media screen and (max-width:1350px) {
+                    .socialB {
+                        display: flex;
+                    }
+
+                    .socialB p {
+                        margin: 0 10px 0 0;
+                    }
+                }
+
+                @media screen and (max-width:910px) {
+                    .socialB {
+                        display: block;
+                        padding: 2%;
+                    }
+
+                    .socialB p {
+                        margin: 0 10px 10px 0;
+                    }
+
+                    .socialB a {
+                        width: 50%;
+                        padding: 9px 0 8px 0;
+                    }
+
+                    .socialB a:last-child {
+                        width: 48%;
+                    }
+                }
+
+                @media screen and (max-width:410px) {
+                    .socialB p {
+                        line-height: 1.5;
+                        padding: 10px 0;
+                    }
+
+                    .socialB a {
+                        width: 100%;
+                    }
+
+                    .socialB a:last-child {
+                        width: 100%;
+                        margin: 10px 0 0 0;
+                    }
+                }
+
+                </style>
+                <div class="socialB">
+                    <p>Ayuda a Movidy a crecer y durar compartiéndolo con vuestros amigos</p>
+                    <a href="https://twitter.com/intent/tweet?url=https://movidy.co/series/s90260-ver-esta-mierda-me-supera-online" target="_blank">Twitter</a>
+                    <a href="https://www.facebook.com/sharer/sharer.php?u=https://movidy.co/series/s90260-ver-esta-mierda-me-supera-online" target="_blank">Facebook</a>
+                </div>
+                <div class="menuIndexF ingt">
+                    <span>
+                        <nav>
+                            <b class="puthere"></b>
+                            <li class="navri nav-A" onclick="singN(this, 1);"><i class="material-icons">info</i>+ Información</li>
+                            <li class="navri" onclick="singN(this, 0);"><i class="material-icons">star</i>Criticas / Votos <b>(44)</b></li>
+                        </nav>
+                    </span>
+                </div>
+                <div class="inE inE0">
+                    <div class="noRegV">Para poder criticar y votar deveras <a href="https://movidy.co/login">iniciar sesión</a></div>
+                    <div class="selectTypeC">
+                        <span onclick="loadCrit(2, this, 1, 1, 44);" class="STC_A"><i class="material-icons">trending_up</i></span>
+                        <span onclick="loadCrit(2, this, 2, 1, 44);"><i class="material-icons">fiber_new</i></span>
+                    </div>
+                    <div id="allCrit">
+                        <div class="itemCrit">
+
+                            <div class="headCri thisIS_4119">
+                                <div class="puntCri">
+
+                                    <div class="tolVot">11</div>
+                                </div>
+                                <div class="uAvatar"><img src="https://movidy.co/static/img/no-avatar.png"></div><a href="https://movidy.co/user/maxi-arias" target="_blank">Maxi arias</a>
+                                <span><i class="material-icons stOn">star</i><i class="material-icons stOn">star</i><i class="material-icons stOn">star</i><i class="material-icons stOn">star</i><i class="material-icons stOn">star</i></span>
+                                <p>28-02-2020 / 0:03</p>
+                            </div>
+                        </div>
+                        <div class="itemCrit">
+
+                            <div class="headCri thisIS_5550">
+                                <div class="puntCri">
+
+                                    <div class="tolVot">9</div>
+                                </div>
+                                <div class="uAvatar"><img src="https://movidy.co/static/img/no-avatar.png"></div><a href="https://movidy.co/user/mvrtinvv" target="_blank">Mvrtinvv</a>
+                                <span><i class="material-icons stOn">star</i><i class="material-icons stOn">star</i><i class="material-icons stOn">star</i><i class="material-icons stOn">star</i><i class="material-icons stOn">star</i></span>
+                                <p>29-03-2020 / 5:50</p>
+                            </div>
+                        </div>
+                        <div class="itemCrit">
+
+                            <div class="headCri thisIS_4583">
+                                <div class="puntCri">
+
+                                    <div class="tolVot">9</div>
+                                </div>
+                                <div class="uAvatar"><img src="https://i.imgur.com/dQRzXb8.jpg"></div><a href="https://movidy.co/user/theoihanml" target="_blank">TheOihanML</a>
+                                <span><i class="material-icons stOn">star</i><i class="material-icons stOn">star</i><i class="material-icons stOn">star</i><i class="material-icons stOn">star</i><i class="material-icons stOn">star</i></span>
+                                <p>12-03-2020 / 0:04</p>
+                            </div>
+                            <div class="cuerCri">Está muy bien, me gusta que se vaya narrando en 3a persona de vez en cuando</div>
+                        </div>
+                        <div class="itemCrit">
+
+                            <div class="headCri thisIS_4533">
+                                <div class="puntCri">
+
+                                    <div class="tolVot">7</div>
+                                </div>
+                                <div class="uAvatar"><img src="https://i.imgur.com/DMplbEd.jpg"></div><a href="https://movidy.co/user/kira12345" target="_blank">Kira12345</a>
+                                <span><i class="material-icons stOn">star</i><i class="material-icons stOn">star</i><i class="material-icons stOn">star</i><i class="material-icons stOn">star</i><i class="material-icons stOn">star</i></span>
+                                <p>09-03-2020 / 11:28</p>
+                            </div>
+                        </div>
+                        <div class="itemCrit">
+
+                            <div class="headCri thisIS_5314">
+                                <div class="puntCri">
+
+                                    <div class="tolVot">7</div>
+                                </div>
+                                <div class="uAvatar"><img src="https://movidy.co/static/img/no-avatar.png"></div><a href="https://movidy.co/user/constanza211" target="_blank">Constanza211</a>
+                                <span><i class="material-icons stOn">star</i><i class="material-icons stOn">star</i><i class="material-icons stOn">star</i><i class="material-icons stOn">star</i><i class="material-icons stOn">star</i></span>
+                                <p>26-03-2020 / 8:34</p>
+                            </div>
+                            <div class="cuerCri">La aamooo</div>
+                        </div>
+                        <div class="itemCrit">
+
+                            <div class="headCri thisIS_4140">
+                                <div class="puntCri">
+
+                                    <div class="tolVot">6</div>
+                                </div>
+                                <div class="uAvatar"><img src="https://i.imgur.com/9YxUnB3.jpg"></div><a href="https://movidy.co/user/skygirl1318" target="_blank">Skygirl1318</a>
+                                <span><i class="material-icons stOn">star</i><i class="material-icons stOn">star</i><i class="material-icons stOn">star</i><i class="material-icons stOn">star</i><i class="material-icons stOn">star</i></span>
+                                <p>28-02-2020 / 17:32</p>
+                            </div>
+                            <div class="cuerCri">Me la vi toda en una noche, la verdad me encantó, no es nada de otro mundo pero la recomiendo, esta muy bien</div>
+                        </div>
+                        <div class="itemCrit">
+
+                            <div class="headCri thisIS_5309">
+                                <div class="puntCri">
+
+                                    <div class="tolVot">5</div>
+                                </div>
+                                <div class="uAvatar"><img src="https://movidy.co/static/img/no-avatar.png"></div><a href="https://movidy.co/user/mishell32" target="_blank">mishell32</a>
+                                <span><i class="material-icons stOn">star</i><i class="material-icons stOn">star</i><i class="material-icons stOn">star</i><i class="material-icons stOn">star</i><i class="material-icons stOn">star</i></span>
+                                <p>26-03-2020 / 6:50</p>
+                            </div>
+                        </div>
+                        <div class="pagCrit" onclick="loadCrit(1, this, 1, 2, 44);"><span>Ver mas criticas / Votos</span></div>
+                    </div>
+                </div>
+                <div class="inE inE1 ActOn">
+                    <div class="statsExtra">
+                        <li><i class="material-icons">web</i> <a href="https://www.netflix.com/title/80244781" target="_blank">www.netflix.com</a></li>
+                        <li><i class="material-icons">access_time</i>0H 23M</li>
+                        <li><i class="material-icons">link</i> <a href="https://www.imdb.com/title/tt9446688" target="_blank">IMDB</a></li>
+                        <li><i class="material-icons">link</i> <a href="https://www.themoviedb.org/tv/90260" target="_blank">TMDB</a></li>
+                    </div>
+
+                    <div class="xBs">
+                        <div class="CastDir HideCaste">
+                            <item>Reparto - Director/a</item>
+                            <li><a href="https://movidy.co/reparto/Sofia-Bryant" up-target="body">
+                                <div class="imgPer"><img src="https://image.tmdb.org/t/p/w50_and_h50_face/sSzne8ydlcwaJtv2u00UCr9uxIS.jpg"></div>
+                                <h3>Sofia Bryant</h3><span>Dina</span>
+                            </a></li>
+                            <li><a href="https://movidy.co/actor/Richard-Ellis" up-target="body">
+                                <div class="imgPer"><img src="https://image.tmdb.org/t/p/w50_and_h50_face/efWMqgVnHBxWVpfPeednrySFKtE.jpg"></div>
+                                <h3>Richard Ellis</h3><span>Brad</span>
+                            </a></li>
+                            <li><a href="https://movidy.co/actriz/Sophia-Lillis" up-target="body">
+                                <div class="imgPer"><img src="https://image.tmdb.org/t/p/w50_and_h50_face/5g5E8yZNlb8FuvgulCOndX181ZW.jpg"></div>
+                                <h3>Sophia Lillis</h3><span>Sydney</span>
+                            </a></li>
+                            <li><a href="https://movidy.co/actriz/Kathleen-Rose-Perkins" up-target="body">
+                                <div class="imgPer"><img src="https://image.tmdb.org/t/p/w50_and_h50_face/ipFy4855jiE3mnDoHZMtJ2cQlIv.jpg"></div>
+                                <h3>Kathleen Rose Perkins</h3><span>Maggie</span>
+                            </a></li>
+                            <li><a href="https://movidy.co/actor/Wyatt-Oleff" up-target="body">
+                                <div class="imgPer"><img src="https://image.tmdb.org/t/p/w50_and_h50_face/rVqmMkdt8IM50mrVrWyxnITgah6.jpg"></div>
+                                <h3>Wyatt Oleff</h3><span>Stanley Barber</span>
+                            </a></li>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="xLatSer">
+                <div class="Episodios">
+                    <div class="clickSeason  clickAc" onclick="activeSeason(this,'temporada-1');">T1</div>
+                    <div class="season temporada-1 seasonAct">
+                        <li><a href="https://movidy.co/series/s90260-ver-esta-mierda-me-supera-online/1x1" up-modal=".Flex">
+                            <div class="wallEp"><img src="https://image.tmdb.org/t/p/w154/zXTjQATiqqPtQoGNCuwOftzX9nE.jpg"></div>
+                            <h2>Episodio 1</h2>
+                            <div class="startEp">
+                                <span>1 - 1</span>
+                                <span>26-02-2020</span>
+                            </div>
+
+                        </a></li>
+                        <li><a href="https://movidy.co/series/s90260-ver-esta-mierda-me-supera-online/1x2" up-modal=".Flex">
+                            <div class="wallEp"><img src="https://image.tmdb.org/t/p/w154/nHPUZaq3zSnLGvi0kb63BoiQfwE.jpg"></div>
+                            <h2>Episodio 2</h2>
+                            <div class="startEp">
+                                <span>1 - 2</span>
+                                <span>26-02-2020</span>
+                            </div>
+
+                        </a></li>
+                        <li><a href="https://movidy.co/series/s90260-ver-esta-mierda-me-supera-online/1x3" up-modal=".Flex">
+                            <div class="wallEp"><img src="https://image.tmdb.org/t/p/w154/emo324cObvPjwncerL31GuFgjsk.jpg"></div>
+                            <h2>Episodio 3</h2>
+                            <div class="startEp">
+                                <span>1 - 3</span>
+                                <span>26-02-2020</span>
+                            </div>
+
+                        </a></li>
+                        <li><a href="https://movidy.co/series/s90260-ver-esta-mierda-me-supera-online/1x4" up-modal=".Flex">
+                            <div class="wallEp"><img src="https://image.tmdb.org/t/p/w154/6CxrkwEJbVSWtPhmseb5vghQbnF.jpg"></div>
+                            <h2>Episodio 4</h2>
+                            <div class="startEp">
+                                <span>1 - 4</span>
+                                <span>26-02-2020</span>
+                            </div>
+
+                        </a></li>
+                        <li><a href="https://movidy.co/series/s90260-ver-esta-mierda-me-supera-online/1x5" up-modal=".Flex">
+                            <div class="wallEp"><img src="https://image.tmdb.org/t/p/w154/mT1GxVeo3MtyBqcJJpBiLMMSC4e.jpg"></div>
+                            <h2>Episodio 5</h2>
+                            <div class="startEp">
+                                <span>1 - 5</span>
+                                <span>26-02-2020</span>
+                            </div>
+
+                        </a></li>
+                        <li><a href="https://movidy.co/series/s90260-ver-esta-mierda-me-supera-online/1x6" up-modal=".Flex">
+                            <div class="wallEp"><img src="https://image.tmdb.org/t/p/w154/egIdyBTRPhsdmrb9MKk1EJFKjpN.jpg"></div>
+                            <h2>Episodio 6</h2>
+                            <div class="startEp">
+                                <span>1 - 6</span>
+                                <span>26-02-2020</span>
+                            </div>
+
+                        </a></li>
+                        <li><a href="https://movidy.co/series/s90260-ver-esta-mierda-me-supera-online/1x7" up-modal=".Flex">
+                            <div class="wallEp"><img src="https://image.tmdb.org/t/p/w154/opwG6izph7vR1Z6OurvcZ3kdHKo.jpg"></div>
+                            <h2>Episodio 7</h2>
+                            <div class="startEp">
+                                <span>1 - 7</span>
+                                <span>26-02-2020</span>
+                            </div>
+
+                        </a></li>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <b>© Movidy.co</b>
+            <a href="#">Política de Privacidad</a>
+            <a href="#">Condiciones de Uso</a>
+            <a href="#">DMCA</a>
+            <a href="#">Ganancias / contribución</a>
+        </footer>
+    </body>
+
+    </html>
