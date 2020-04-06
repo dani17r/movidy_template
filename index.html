@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700" rel="stylesheet">
+        <link rel="stylesheet" href="assets/libs/material/material-icons.css">
+        <link rel="stylesheet" href="assets/css/style.css">
+
+        <script src="assets/js/custom.js"></script>
+    </head>
+
+    <body class="overflow-x-h">
+        <header>
+            <div class="fondo" onclick="fondoBlueClick(this);"></div>
+            <div class="btn-menu" onclick="menu();">
+                <i class="material-icons">menu</i>
+            </div>
+
+            <a href="#" class="logo-a">
+                movidy<p class="logo-p">QUÉDATE EN CASA</p>
+            </a>
+
+            <nav class="nav-menu">
+                <div class="nav-center">
+                    <a href="inicio.html" class="nav-active">Discover</a>
+                    <a href="series.html">Series</a>
+                    <a href="#">Peliculas</a>
+                    <a href="listas.html">Listas</a>
+                </div>
+            </nav>
+
+            <div class="search-menu" onclick="searchMenu();">
+                <i class="material-icons">search</i>
+            </div>
+            <form class="search-form">
+                <div id="div-form-search">
+                    <i class="material-icons">search</i>
+                    <input name="go" autocomplete="off" spellcheck="false" id="autoseach" type="text" maxlength="40" placeholder="Buscador...">
+                    <i class="material-icons close-search" onclick="closeSearchMenu();">close</i>
+                    <div class="list-search"></div>
+                </div>
+            </form>
+
+            <div class="btn-multible">
+                <a href="#">Iniciar<b> sesión</b></a>
+                <a href="#">Crear<b> cuenta</b></a>
+            </div>
+        </header>
+
+        <div id="insert-list"></div>
+
+        <div id="body-main">
+            <div id="movidyCarrusel" style="display: block;" items="2">
+                <span class="carrPrev">
+                    <i class="material-icons">chevron_left</i>
+                </span>
+                <div id="ContentDay" class="contenedorCarrusel" style="width: 4026px;">
+                    <article class="Item" style="width: 661px;margin: 0 10px 0 0;">
+                        <div class="articleItem">
+                            <a href="serieOne.html">
+                                <span>ESTRENO AMAZON</span>
+                                <div class="loadBoxInfo"></div>
+                                <img src="https://image.tmdb.org/t/p/w780/6LmHxVcp5dgGyHG8kTVcrQxbaHq.jpg">
+                                <div class="hideItems">
+                                    <h2>Tales from the Loop</h2>
+                                    <span><b>Drama - Misterio - Ciencia Ficción</b></span>
+                                </div>
+                            </a>
+                        </div>
+                    </article>
+                    <article class="Item" style="width: 671px;">
+                        <div class="articleItem">
+                            <a href="serieOne.html">
+                                <span>ESTRENO NETFLIX</span>
+                                <div class="loadBoxInfo"></div>
+                                <img src="https://image.tmdb.org/t/p/w780/piuRhGiQBYWgW668eSNJ2ug5uAO.jpg">
+                                <div class="hideItems">
+                                    <h2>La casa de papel</h2>
+                                    <span><b>Temporada 4 disponible</b></span>
+                                </div>
+                            </a>
+                        </div>
+                    </article>
+                    <article class="Item" style="width: 661px;margin: 0 10px 0 0;">
+                        <div class="articleItem">
+                            <a href="serieOne.html">
+                                <span>Estreno Netflix</span>
+                                <div class="loadBoxInfo"></div>
+                                <img src="https://image.tmdb.org/t/p/w780/1OTITGQ8yqerNEiwnHqpA7pD8Aq.jpg">
+                                <div class="hideItems">
+                                    <h2>Locke &amp; Key</h2>
+                                    <span><b>Ciencia Ficción - Drama - Acción</b></span>
+                                </div>
+                            </a>
+                        </div>
+                    </article>
+                </div>
+                <span class="carrNext" onclick="nextC(this, 2);">
+                    <i class="material-icons">keyboard_arrow_right</i>
+                </span>
+            </div>
+            <div class="navbar-section">
+                <span>
+                    <nav>
+                        <li class="nav-li nav-active" onclick="menuTap(this, 1);">
+                            Nuevos content-episodios
+                        </li>
+                        <li class="nav-li" onclick="menuTap(this, 2);">Estrenos de cine</li>
+                        <li class="nav-li" onclick="menuTap(this, 3);">Próximos estrenos</li>
+                    </nav>
+                </span>
+            </div>
+            <div class="section-cards">
+                <article class="cards">
+                    <a href="videoOne.html">
+                        <div class="img-content">
+                            <img src="https://image.tmdb.org/t/p/w300/8op0JAFm1BU7OxwERTmQKs1UhN9.jpg" alt="Cuentos asombrosos" title="Cuentos asombrosos">
+                        </div>
+                        <div class="card-descriptions">
+                            <h2><b>1 - 5</b> Cuentos asombrosos</h2>
+                            <span><b>03-04-2020</b></span>
+                        </div>
+                        <span class="card-border"></span>
+                    </a>
+                </article>
+                <article class="cards">
+                    <a href="videoOne.html">
+                        <div class="img-content">
+                            <img src="https://image.tmdb.org/t/p/w300/wxPxeGw7GRxxChlJrq5UlACjXDf.jpg" alt="Motherland: Fort Salem" title="Motherland: Fort Salem">
+                        </div>
+                        <div class="card-descriptions">
+                            <h2><b>1 - 3</b> Motherland: Fort Salem</h2>
+                            <span><b>01-04-2020</b></span>
+                        </div>
+                        <span class="card-border"></span>
+                    </a>
+                </article>
+                <article class="cards">
+                    <a href="videoOne.html">
+                        <div class="img-content">
+                            <img src="https://image.tmdb.org/t/p/w300/tOzp2EFBmKGGFhmJtDa6Npvpe4P.jpg" alt="FBI: Most Wanted" title="FBI: Most Wanted">
+                        </div>
+                        <div class="card-descriptions">
+                            <h2><b>1 - 10</b> FBI: Most Wanted</h2>
+                            <span><b>31-03-2020</b></span>
+                        </div>
+                        <span class="card-border"></span>
+                    </a>
+                </article>
+                <article class="cards">
+                    <a href="videoOne.html">
+                        <div class="img-content">
+                            <img src="https://image.tmdb.org/t/p/w300/aV8n5PeD53Hoqyv6V4nlc3rvNjT.jpg" alt="Dave" title="Dave">
+                        </div>
+                        <div class="card-descriptions">
+                            <h2><b>1 - 6</b> Dave</h2>
+                            <span><b>01-04-2020</b></span>
+                        </div>
+                        <span class="card-border"></span>
+                    </a>
+                </article>
+                <article class="cards">
+                    <a href="videoOne.html">
+                        <div class="img-content">
+                            <img src="https://image.tmdb.org/t/p/w300/uv63iNWOh69bSJYJQZjiX6n8B3m.jpg" alt="Devs" title="Devs">
+                        </div>
+                        <div class="card-descriptions">
+                            <h2><b>1 - 6</b> Devs</h2>
+                            <span><b>02-04-2020</b></span>
+                        </div>
+                        <span class="card-border"></span>
+                    </a>
+                </article>
+                <article class="cards">
+                    <a href="videoOne.html">
+                        <div class="img-content">
+                            <img src="https://image.tmdb.org/t/p/w300/uJZUfoGqtiuGfGXtVgYqIafZ1Ii.jpg" alt="FBI" title="FBI">
+                        </div>
+                        <div class="card-descriptions">
+                            <h2><b>2 - 19</b> FBI</h2>
+                            <span><b>31-03-2020</b></span>
+                        </div>
+                        <span class="card-border"></span>
+                    </a>
+                </article>
+                <article class="cards">
+                    <a href="videoOne.html">
+                        <div class="img-content">
+                            <img src="https://image.tmdb.org/t/p/w300/yrvfcgR0R9uGxyMYrQGxe7Gu47i.jpg" alt="Miracle Workers" title="Miracle Workers">
+                        </div>
+                        <div class="card-descriptions">
+                            <h2><b>2 - 10</b> Miracle Workers</h2>
+                            <span><b>31-03-2020</b></span>
+                        </div>
+                        <span class="card-border"></span>
+                    </a>
+                </article>
+                <article class="cards">
+                    <a href="videoOne.html">
+                        <div class="img-content">
+                            <img src="https://image.tmdb.org/t/p/w300/vmokjFmPtDZySnNTQd6uqYcTjNF.jpg" alt="Modern Family" title="Modern Family">
+                        </div>
+                        <div class="card-descriptions">
+                            <h2><b>11 - 16</b> Modern Family</h2>
+                            <span><b>01-04-2020</b></span>
+                        </div>
+                        <span class="card-border"></span>
+                    </a>
+                </article>
+                <article class="cards">
+                    <a href="videoOne.html">
+                        <div class="img-content">
+                            <img src="https://image.tmdb.org/t/p/w300/99O4q51zi9pvDUzhDkxeq8bKi3z.jpg" alt="The Dead Lands" title="The Dead Lands">
+                        </div>
+                        <div class="card-descriptions">
+                            <h2><b>1 - 6</b> The Dead Lands</h2>
+                            <span><b>20-02-2020</b></span>
+                        </div>
+                        <span class="card-border"></span>
+                    </a>
+                </article>
+                <article class="cards">
+                    <a href="videoOne.html">
+                        <div class="img-content">
+                            <img src="https://image.tmdb.org/t/p/w300/qRBIrS1pB5sKrALN89H51kKSFH2.jpg" alt="Briarpatch" title="Briarpatch">
+                        </div>
+                        <div class="card-descriptions">
+                            <h2><b>1 - 8</b> Briarpatch</h2>
+                            <span><b>30-03-2020</b></span>
+                        </div>
+                        <span class="card-border"></span>
+                    </a>
+                </article>
+                <article class="cards">
+                    <a href="videoOne.html">
+                        <div class="img-content">
+                            <img src="https://image.tmdb.org/t/p/w300/wuVngWpJNrhojvkbYibosycSUKy.jpg" alt="Little Fires Everywhere" title="Little Fires Everywhere">
+                        </div>
+                        <div class="card-descriptions">
+                            <h2><b>1 - 5</b> Little Fires Everywhere</h2>
+                            <span><b>01-04-2020</b></span>
+                        </div>
+                        <span class="card-border"></span>
+                    </a>
+                </article>
+                <article class="cards">
+                    <a href="videoOne.html">
+                        <div class="img-content">
+                            <img src="https://image.tmdb.org/t/p/w300/zgsFGKgd4b8bqRwvCbUFThrq1A.jpg" alt="Hamilton" title="Hamilton">
+                        </div>
+                        <div class="card-descriptions">
+                            <h2><b>1 - 5</b> Hamilton</h2>
+                            <span><b>29-01-2020</b></span>
+                        </div>
+                        <span class="card-border"></span>
+                    </a>
+                </article>
+            </div>
+        </div>
+        <footer>
+            <b>© Movidy.co</b>
+            <a href="#">Política de Privacidad</a>
+            <a href="#">Condiciones de Uso</a>
+            <a href="#">DMCA</a>
+            <a href="#">Ganancias / contribución</a>
+        </footer>
+    </body>
+
+</html>

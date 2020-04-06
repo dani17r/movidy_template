@@ -1,8 +1,8 @@
 function filter(e) {
 	document.getElementById("filterInsert").classList.toggle("filterInsertA"),
-		e.classList.toggle("filtroA"),
-		(filtroA = document.querySelector(".filtroA")),
-		null != filtroA
+		e.classList.toggle("filterA"),
+		(filterA = document.querySelector(".filterA")),
+		null != filterA
 			? document
 					.querySelector("body")
 					.setAttribute(
@@ -11,7 +11,7 @@ function filter(e) {
 					)
 			: document.querySelector("body").setAttribute("style", "");
 }
-function cfilter(e, t, i) {
+function filterActive(e, t, i) {
 	if (1 == i) var n = "genero";
 	if (2 == i) n = "year";
 	var o = document.getElementById("cadenota").getAttribute(n);
@@ -24,33 +24,40 @@ function cfilter(e, t, i) {
 	else document.getElementById("cadenota").setAttribute(n, t + ",");
 	e.setAttribute("onclick", "nofilter(this, '" + t + "', '" + i + "');"),
 		e.classList.toggle("filterON");
-	var c = document.getElementById("contadorFiltro").getAttribute("cantidad");
-	(filtrovar = document.getElementById("contadorFiltro")),
+	var c = document.getElementById("count-filter").getAttribute("cantidad");
+	(filtervar = document.getElementById("count-filter")),
 		c
 			? ((moreselect = parseInt(c) + parseInt(1)),
-			  filtrovar.setAttribute("cantidad", moreselect),
-			  (filtrovar.innerHTML = `Has seleccionado ${moreselect} elemento`))
-			: (filtrovar.setAttribute("cantidad", 1),
-			  (filtrovar.innerHTML = "Has seleccionado 1 elemento"));
+			  filtervar.setAttribute("cantidad", moreselect),
+			  (filtervar.innerHTML = `Has seleccionado ${moreselect} elemento`))
+			: (filtervar.setAttribute("cantidad", 1),
+			  (filtervar.innerHTML = "Has seleccionado 1 elemento"));
+}
+function nofilter(e, t, i) {
+    if (1 == i) var n = "genero";
+    if (2 == i) n = "year";
+    var o = document.getElementById("cadenota").getAttribute(n);
+    o && -1 != o.indexOf(t) && (cadenada = o.replace(t + ",", ""), document.getElementById("cadenota").setAttribute(n, cadenada)), e.setAttribute("onclick", "cfilter(this, '" + t + "', '" + i + "');"), e.classList.toggle("filterON");
+    var r = document.getElementById("count-filter").getAttribute("cantidad");
+    r && (moreselect = parseInt(r) - parseInt(1), filtrovar = document.getElementById("count-filter"), filtrovar.setAttribute("cantidad", moreselect), filtrovar.innerHTML = `Has seleccionado ${moreselect} elemento`)
+}
+function menu() {
+	document.querySelector(".nav-menu").classList.add("nav-menuA"),
+		document.querySelector(".fondo").classList.add("new-fondo");
 }
 
-function meN_Mo() {
-	document.querySelector(".NavMob").classList.add("NavMobA"),
-		document.querySelector(".fndo_Mo").classList.add("fndo_MoA");
+function fondoBlueClick(e) {
+	document.querySelector(".nav-menu").classList.remove("nav-menuA"),
+		document.querySelector(".fondo").classList.remove("new-fondo");
 }
 
-function fndo_Mo(e) {
-	document.querySelector(".NavMob").classList.remove("NavMobA"),
-		document.querySelector(".fndo_Mo").classList.remove("fndo_MoA");
+function searchMenu() {
+	document.querySelector(".search-form").classList.add("search-formA");
 }
 
-function seac_Mo() {
-	document.querySelector(".seMobF").classList.add("seMobFA");
-}
-
-function cseac_Mo() {
-	document.querySelector(".seMobF").classList.remove("seMobFA"),
-		document.querySelector(".listSearch").classList.remove("listSearchA"),
+function closeSearchMenu() {
+	document.querySelector(".search-form").classList.remove("search-formA"),
+		document.querySelector(".list-search").classList.remove("list-searchA"),
 		(document.getElementById("autoseach").value = "");
 }
 
@@ -160,4 +167,49 @@ function prevC(e, t, n) {
 				.setAttribute("onclick", "nextC(this, " + sumaPage + ");"),
 			document.querySelector(".carrNext").setAttribute("style", "");
 	}
+}
+function menuTap(who, id) {
+	var n = document.getElementsByClassName("nav-li");
+	for (i = 0; i < n.length; i++) n[i].classList.remove("nav-active");
+	var cnt = document.querySelector(".section-cards");
+	 cnt.innerHTML = `<div class="loadingvideo">${svg_load}</div>`;
+
+	var data = new FormData();
+	data.append('id', id);
+
+	fetch(URLBASE+'/json/indexJson', {
+	method: 'POST',
+	body: data
+	}) .then(res => res.json())
+	.then( data => {
+
+		if (data.status==202) {
+			who.classList.add("nav-A");
+			cnt.innerHTML = data.result;
+			echo.init({ callback: function(e, t) {} });
+		}
+
+		if (data.status==200) {
+			cnt.innerHTML = '<div class="noResLive"><p style="background: #1b1b1b;">No hay contenido disponible para esta opciÃ³n</p></div>';
+		}
+
+		if (data.status==404) {
+			cnt.innerHTML = '<div class="noResLive"><p>Hubo un error inesperado, intenelo mas tarde</p></div>';
+		}
+
+	}).catch(function(error) {
+		cnt.innerHTML = '<div class="noResLive"><p>Hubo un error inesperado, intenelo mas tarde</p></div>';
+	});
+
+}
+function nextSing(who, id) {
+
+	var n = document.getElementsByClassName("nav-li");
+	for (i = 0; i < n.length; i++) n[i].classList.remove("nav-active");
+	who.classList.add("nav-A");
+
+	var k = document.getElementsByClassName("in");
+	for (i = 0; i < k.length; i++) k[i].classList.remove("content-link-directors");
+	document.querySelector(".in"+id).classList.add("content-link-directors");
+	echo.init({ callback: function(e, t) {} });
 }

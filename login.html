@@ -23,7 +23,7 @@
             <nav class="nav-menu">
                 <div class="nav-center">
                     <a href="inicio.html">Discover</a>
-                    <a href="series.html">Series</a>
+                    <a href="series.html" class="nav-active">Series</a>
                     <a href="#">Peliculas</a>
                     <a href="listas.html">Listas</a>
                 </div>
@@ -32,14 +32,16 @@
             <div class="search-menu" onclick="searchMenu();">
                 <i class="material-icons">search</i>
             </div>
+
             <form class="search-form">
                 <div id="div-form-search">
-                    <i class="material-icons">search</i>
+                    <i class="material-icons"></i>
                     <input name="go" autocomplete="off" spellcheck="false" id="autoseach" type="text" maxlength="40" placeholder="Buscador...">
                     <i class="material-icons close-search" onclick="closeSearchMenu();">close</i>
                     <div class="list-search"></div>
                 </div>
             </form>
+
             <div class="btn-multible">
                 <a href="#">Iniciar<b> sesión</b></a>
                 <a href="#">Crear<b> cuenta</b></a>
@@ -48,40 +50,25 @@
 
         <div id="insert-list"></div>
 
-        <div id="body-main">
-            <div id="movie-eposodio" class="flex" style="display:table;">
-                <div class="info-eposodio">
-                    <span class="info-span">6 - 10</span>
-                    <h1>Episodio 10</h1>
-                    <span class="info-span-date">2 Apr 2020</span>
-                    <article>Por ahora no tenemos ninguna descripción para el episodio
-                        <b>Episodio 10</b>
-                    </article>
+        <div id="main-login-register">
+            <form class="form-log-reg" autocomplete="off">
+                <span>o <a href="./register">crear una cuenta</a></span>
+                <h3>Iniciar sesión</h3>
+                <p>Por favor ingresa tus datos correctamente</p>
+                <div class="message-form-div"></div>
+                <div class="form-input-content">
+                    <i class="material-icons">person</i>
+                    <input type="text" name="user" placeholder="Usuario">
                 </div>
 
-                <div class="nav-episodio-one">
-                    <a href="#">
-                        <i class="material-icons">skip_previous</i> Anterior
-                    </a>
-                    <a href="#">
-                        <i class="material-icons">list</i> temporadas</a>
-                        <span style="cursor: no-drop;opacity: 0.6;">
-                            Siguiente <i class="material-icons">skip_next</i>
-                        </span>
+                <div class="form-input-content">
+                    <i class="material-icons">vpn_key</i>
+                    <input type="password" name="pass" placeholder="Contraseña">
                 </div>
-
-                <div class="nav-episodio-two">
-                    <li class="li-nav-episodio">
-                        <i class="material-icons">copyright</i> Oficial
-                    </li>
-                    <li>
-                        <i class="material-icons">link</i>
-                        Enlaces de usuarios <b>44</b>
-                    </li>
+                <div class="form-btn-content">
+                    <input type="submit" name="submit" value="Iniciar sesión">
                 </div>
-
-                <iframe class="iframe-video"></iframe>
-            </div>
+            </form>
         </div>
         <footer>
             <b>© Movidy.co</b>

@@ -1,220 +1,255 @@
 <!DOCTYPE html>
 <html>
 
-<head>
-    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700" rel="stylesheet">
-    <link rel="stylesheet" href="assets/libs/material/material-icons.css">
-    <link rel="stylesheet" href="assets/css/style.css">
+    <head>
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700" rel="stylesheet">
+        <link rel="stylesheet" href="assets/libs/material/material-icons.css">
+        <link rel="stylesheet" href="assets/css/style.css">
 
-    <script src="assets/js/custom.js"></script>
-</head>
+        <script src="assets/js/custom.js"></script>
+    </head>
 
-<body style="overflow-x: hidden;">
-    <div class="cargaAjax"></div>
-    <div id="notc"></div>
-    <header>
-        <div class="fndo_Mo" onclick="fndo_Mo(this);"></div>
-        <div class="boton_mov" onclick="meN_Mo();"><i class="material-icons">menu</i></div>
-
-        <a href="https://movidy.co" class="Logo_dd" style="
-        margin: -1px 0 0 15px;
-        font-size: 26px;
-        ">movidy<p style="
-        font-size: 11px;
-        margin: 0;
-        color: #a5eb54;
-        ">QUÉDATE EN CASA</p></a>
-
-        <nav class="NavMob">
-            <div class="centerMb">
-                <a href="inicio.html" class="nav-A">Discover</a>
-                <a href="series.html">Series</a>
-                <a href="#">Peliculas</a>
-                <a href="listas.html">Listas</a>
+    <body class="overflow-x-h">
+        <header>
+            <div class="fondo" onclick="fondoBlueClick(this);"></div>
+            <div class="btn-menu" onclick="menu();">
+                <i class="material-icons">menu</i>
             </div>
-        </nav>
 
-        <div class="searchMob" onclick="seac_Mo();"><i class="material-icons">search</i></div>
-        <form class="seMobF" method="get" action="https://movidy.co/search">
+            <a href="#" class="logo-a">
+                movidy<p class="logo-p">QUÉDATE EN CASA</p>
+            </a>
 
-            <div id="InFrag">
+            <nav class="nav-menu">
+                <div class="nav-center">
+                    <a href="inicio.html">Discover</a>
+                    <a href="series.html">Series</a>
+                    <a href="#">Peliculas</a>
+                    <a href="listas.html" class="nav-active">Listas</a>
+                </div>
+            </nav>
+
+            <div class="search-menu" onclick="searchMenu();">
                 <i class="material-icons">search</i>
-                <input name="go" autocomplete="off" spellcheck="false" id="autoseach" type="text" onkeyup="liveSearch(event, 0)" onpaste="setTimeout('liveSearch(event, 2)', 100)" maxlength="40" placeholder="Buscador..." value="">
-                <i class="material-icons closeSeach" onclick="cseac_Mo();">close</i>
-                <div class="listSearch"></div>
             </div>
 
-        </form>
-        <div class="userOff">
-            <a href="#">Iniciar<b> sesión</b></a>
-            <a href="#">Crear<b> cuenta</b></a>
-        </div>
-    </header>
+            <form class="search-form">
+                <div id="div-form-search">
+                    <i class="material-icons">search</i>
+                    <input name="go" autocomplete="off" spellcheck="false" id="autoseach" type="text" maxlength="40" placeholder="Buscador...">
+                    <i class="material-icons close-search" onclick="closeSearchMenu();">close</i>
+                    <div class="list-search"></div>
+                </div>
+            </form>
 
-    <div id="myList"></div>
+            <div class="btn-multible">
+                <a href="#">Iniciar<b> sesión</b></a>
+                <a href="#">Crear<b> cuenta</b></a>
+            </div>
+        </header>
 
-    <div id="movidyMain">
-        <div id="first3Lists" class="wtfisthis">
-            <article>
-                <div class="postersMov">
-                    <li><img src="https://image.tmdb.org/t/p/w154/iKVR1ba3W1wCm9bVCcpnNvxQUWX.jpg"></li>
-                    <li><img src="https://image.tmdb.org/t/p/w154/1ELa9bm6zxIADz8u71VZtvNzx3k.jpg"></li>
-                    <li><img src="https://image.tmdb.org/t/p/w154/lsQWAoT3IERwQkQNFTkIeZk2R1S.jpg"></li>
-                    <li><img src="https://image.tmdb.org/t/p/w154/bvYI6i9lQ3bsup9PgnMF3YYr8ZR.jpg"></li>
-                    <li><img src="https://image.tmdb.org/t/p/w154/rDLmMzkaFMFWF1UnnlboMfifVXM.jpg"></li>
-                </div>
-                <a href="listaOne.html" up-target="body">
-                    <h2>Universo Cinematográfico de Marvel (UCM)</h2>
-                    <p>UCM. Ordenadas respecto a su fecha de estreno, no confundir con el orden cronológico de la historia.</p>
-                </a>
+        <div id="insert-list"></div>
 
-                <a href="https://movidy.co/user/movidy" class="createdbyT kcdirs" up-target="body">
-                    <div class="uAvatar"><img src="https://i.imgur.com/HD27z9M.png"></div>
-                    <span>Movidy</span>
-                </a>
-                <div class="createdbyT">
-                    <div class="uAvatar4"><i class="material-icons">favorite</i></div>
-                    <span>925</span>
-                </div>
-            </article>
-            <article>
-                <div class="postersMov">
-                    <li><img src="https://image.tmdb.org/t/p/w154/758TBPSsOWwHgHhUdnq4JsWdj7u.jpg"></li>
-                    <li><img src="https://image.tmdb.org/t/p/w154/tiTKWJv8z9YRaHor5037PcF1gtr.jpg"></li>
-                    <li><img src="https://image.tmdb.org/t/p/w154/bCGC6cAEKzm45J7SPsApAnp9mNx.jpg"></li>
-                    <li><img src="https://image.tmdb.org/t/p/w154/Muev370hN3vdjGsC1ip1HcWqbT.jpg"></li>
-                    <li><img src="https://image.tmdb.org/t/p/w154/jHOrNJNM03Lsjdw7nsw7TlqBOhd.jpg"></li>
-                </div>
-                <a href="listaOne.html" up-target="body">
-                    <h2>Netflix Originals (Series)</h2>
-                    <p>Series que fueron adquiridas o producidas íntegramente por Netflix, se actualizara a medida que se vaya agregando más contenido.</p>
-                </a>
+        <div id="body-main">
+            <div id="list-first" class="li-date-genero-content-marca">
+                <article>
+                    <div class="posters">
+                        <li><img src="https://image.tmdb.org/t/p/w154/iKVR1ba3W1wCm9bVCcpnNvxQUWX.jpg"></li>
+                        <li><img src="https://image.tmdb.org/t/p/w154/1ELa9bm6zxIADz8u71VZtvNzx3k.jpg"></li>
+                        <li><img src="https://image.tmdb.org/t/p/w154/lsQWAoT3IERwQkQNFTkIeZk2R1S.jpg"></li>
+                        <li><img src="https://image.tmdb.org/t/p/w154/bvYI6i9lQ3bsup9PgnMF3YYr8ZR.jpg"></li>
+                        <li><img src="https://image.tmdb.org/t/p/w154/rDLmMzkaFMFWF1UnnlboMfifVXM.jpg"></li>
+                    </div>
+                    <a href="listaOne.html">
+                        <h2>Universo Cinematográfico de Marvel (UCM)</h2>
+                        <p>UCM. Ordenadas respecto a su fecha de estreno, no confundir con el orden cronológico de la historia.</p>
+                    </a>
 
-                <a href="https://movidy.co/user/movidy" class="createdbyT kcdirs" up-target="body">
-                    <div class="uAvatar"><img src="https://i.imgur.com/HD27z9M.png"></div>
-                    <span>Movidy</span>
-                </a>
-                <div class="createdbyT">
-                    <div class="uAvatar4"><i class="material-icons">favorite</i></div>
-                    <span>463</span>
-                </div>
-            </article>
-            <article>
-                <div class="postersMov">
-                    <li><img src="https://image.tmdb.org/t/p/w154/r93RruvY8JK5WiN7wZQlXDiD9Tn.jpg"></li>
-                    <li><img src="https://image.tmdb.org/t/p/w154/nLqTH41tIi3J2EYmKrTcn5c0eqN.jpg"></li>
-                    <li><img src="https://image.tmdb.org/t/p/w154/2cWcVK2exLXabC3itN6joKjJcce.jpg"></li>
-                    <li><img src="https://image.tmdb.org/t/p/w154/zUTmh6AcCfzM4QwOZbRd254kQg0.jpg"></li>
-                    <li><img src="https://image.tmdb.org/t/p/w154/eU7KcNAOeZj9PBIcGUMSsuJz8qj.jpg"></li>
-                </div>
-                <a href="listaOne.html" up-target="body">
-                    <h2>Disney+</h2>
-                    <p>Disney + Pixar</p>
-                </a>
+                    <a href="#" class="content-min target-content">
+                        <div class="content-img-avatar">
+                            <img src="https://i.imgur.com/HD27z9M.png">
+                        </div>
+                        <span>Movidy</span>
+                    </a>
+                    <div class="content-min">
+                        <div class="content-img-avatar-for">
+                            <i class="material-icons">favorite</i>
+                        </div>
+                        <span>925</span>
+                    </div>
+                </article>
+                <article>
+                    <div class="posters">
+                        <li><img src="https://image.tmdb.org/t/p/w154/758TBPSsOWwHgHhUdnq4JsWdj7u.jpg"></li>
+                        <li><img src="https://image.tmdb.org/t/p/w154/tiTKWJv8z9YRaHor5037PcF1gtr.jpg"></li>
+                        <li><img src="https://image.tmdb.org/t/p/w154/bCGC6cAEKzm45J7SPsApAnp9mNx.jpg"></li>
+                        <li><img src="https://image.tmdb.org/t/p/w154/Muev370hN3vdjGsC1ip1HcWqbT.jpg"></li>
+                        <li><img src="https://image.tmdb.org/t/p/w154/jHOrNJNM03Lsjdw7nsw7TlqBOhd.jpg"></li>
+                    </div>
+                    <a href="listaOne.html">
+                        <h2>Netflix Originals (Series)</h2>
+                        <p>Series que fueron adquiridas o producidas íntegramente por Netflix, se actualizara a medida que se vaya agregando más contenido.</p>
+                    </a>
 
-                <a href="listaOne.html" class="createdbyT kcdirs" up-target="body">
-                    <div class="uAvatar"><img src="https://i.imgur.com/ZxPF7Ly.jpg"></div>
-                    <span>oscarspain</span>
-                </a>
-                <div class="createdbyT">
-                    <div class="uAvatar4"><i class="material-icons">favorite</i></div>
-                    <span>342</span>
-                </div>
-            </article>
-        </div>
-        <div id="first3Lists" class="otherLits">
-            <article>
-                <a href="listaOne.html" up-target="body">
-                    <h2>HBO </h2>
-                    <p>Series HBO España </p>
-                </a>
+                    <a href="#" class="content-min target-content">
+                        <div class="content-img-avatar">
+                            <img src="https://i.imgur.com/HD27z9M.png">
+                        </div>
+                        <span>Movidy</span>
+                    </a>
+                    <div class="content-min">
+                        <div class="content-img-avatar-for">
+                            <i class="material-icons">favorite</i>
+                        </div>
+                        <span>463</span>
+                    </div>
+                </article>
+                <article>
+                    <div class="posters">
+                        <li><img src="https://image.tmdb.org/t/p/w154/r93RruvY8JK5WiN7wZQlXDiD9Tn.jpg"></li>
+                        <li><img src="https://image.tmdb.org/t/p/w154/nLqTH41tIi3J2EYmKrTcn5c0eqN.jpg"></li>
+                        <li><img src="https://image.tmdb.org/t/p/w154/2cWcVK2exLXabC3itN6joKjJcce.jpg"></li>
+                        <li><img src="https://image.tmdb.org/t/p/w154/zUTmh6AcCfzM4QwOZbRd254kQg0.jpg"></li>
+                        <li><img src="https://image.tmdb.org/t/p/w154/eU7KcNAOeZj9PBIcGUMSsuJz8qj.jpg"></li>
+                    </div>
+                    <a href="listaOne.html">
+                        <h2>Disney+</h2>
+                        <p>Disney + Pixar</p>
+                    </a>
 
-                <a href="https://movidy.co/user/oscarspain" class="createdbyT kcdirs">
-                    <div class="uAvatar"><img src="https://i.imgur.com/ZxPF7Ly.jpg"></div>
-                    <span>oscarspain</span>
-                </a>
-                <div class="createdbyT">
-                    <div class="uAvatar4"><i class="material-icons">favorite</i></div>
-                    <span>241</span>
-                </div>
-            </article>
-            <article>
-                <a href="listaOne.html" up-target="body">
-                    <h2>Netflix Originals (Películas)</h2>
-                    <p>Películas que fueron adquiridas o producidas íntegramente por Netflix, se actualizara a medida que se vaya agregando más contenido.</p>
-                </a>
+                    <a href="listaOne.html" class="content-min target-content">
+                        <div class="content-img-avatar">
+                            <img src="https://i.imgur.com/ZxPF7Ly.jpg">
+                        </div>
+                        <span>oscarspain</span>
+                    </a>
+                    <div class="content-min">
+                        <div class="content-img-avatar-for">
+                            <i class="material-icons">favorite</i>
+                        </div>
+                        <span>342</span>
+                    </div>
+                </article>
+            </div>
+            <div id="list-first" class="li-date-genero-content-marca-two">
+                <article>
+                    <a href="listaOne.html">
+                        <h2>HBO </h2>
+                        <p>Series HBO España </p>
+                    </a>
 
-                <a href="https://movidy.co/user/movidy" class="createdbyT kcdirs">
-                    <div class="uAvatar"><img src="https://i.imgur.com/HD27z9M.png"></div>
-                    <span>Movidy</span>
-                </a>
-                <div class="createdbyT">
-                    <div class="uAvatar4"><i class="material-icons">favorite</i></div>
-                    <span>201</span>
-                </div>
-            </article>
-            <article>
-                <a href="listaOne.html" up-target="body">
-                    <h2>El Terror</h2>
-                    <p>Esta lista fue creada por un usuario de megadede llamado (justapuesta) y ha hecho un trabajo impresionante ordenando las películas por sus sagas.</p>
-                </a>
+                    <a href="#" class="content-min target-content">
+                        <div class="content-img-avatar">
+                            <img src="https://i.imgur.com/ZxPF7Ly.jpg">
+                        </div>
+                        <span>oscarspain</span>
+                    </a>
+                    <div class="content-min">
+                        <div class="content-img-avatar-for">
+                            <i class="material-icons">favorite</i>
+                        </div>
+                        <span>241</span>
+                    </div>
+                </article>
+                <article>
+                    <a href="listaOne.html">
+                        <h2>Netflix Originals (Películas)</h2>
+                        <p>Películas que fueron adquiridas o producidas íntegramente por Netflix, se actualizara a medida que se vaya agregando más contenido.</p>
+                    </a>
 
-                <a href="https://movidy.co/user/movidy" class="createdbyT kcdirs">
-                    <div class="uAvatar"><img src="https://i.imgur.com/HD27z9M.png"></div>
-                    <span>Movidy</span>
-                </a>
-                <div class="createdbyT">
-                    <div class="uAvatar4"><i class="material-icons">favorite</i></div>
-                    <span>189</span>
-                </div>
-            </article>
-            <article>
-                <a href="listaOne.html" up-target="body">
-                    <h2>Harry Potter y Animales Fantásticos </h2>
-                    <p>aún faltan por subir algunas películas </p>
-                </a>
+                    <a href="#" class="content-min target-content">
+                        <div class="content-img-avatar">
+                            <img src="https://i.imgur.com/HD27z9M.png">
+                        </div>
+                        <span>Movidy</span>
+                    </a>
+                    <div class="content-min">
+                        <div class="content-img-avatar-for">
+                            <i class="material-icons">favorite</i>
+                        </div>
+                        <span>201</span>
+                    </div>
+                </article>
+                <article>
+                    <a href="listaOne.html">
+                        <h2>El Terror</h2>
+                        <p>Esta lista fue creada por un usuario de megadede llamado (justapuesta) y ha hecho un trabajo impresionante ordenando las películas por sus sagas.</p>
+                    </a>
 
-                <a href="#" class="createdbyT kcdirs">
-                    <div class="uAvatar"><img src="https://i.imgur.com/1TPLM8s.jpg"></div>
-                    <span>Pittt92</span>
-                </a>
-                <div class="createdbyT">
-                    <div class="uAvatar4"><i class="material-icons">favorite</i></div>
-                    <span>174</span>
-                </div>
-            </article>
-            <article>
-                <a href="listaOne.html" up-target="body">
-                    <h2>Cronologia Universo Cinematografico De Marvel(UCM) </h2>
-                    <p>Ordenadas cronologicamente</p>
-                </a>
+                    <a href="#" class="content-min target-content">
+                        <div class="content-img-avatar">
+                            <img src="https://i.imgur.com/HD27z9M.png">
+                        </div>
+                        <span>Movidy</span>
+                    </a>
+                    <div class="content-min">
+                        <div class="content-img-avatar-for">
+                            <i class="material-icons">favorite</i>
+                        </div>
+                        <span>189</span>
+                    </div>
+                </article>
+                <article>
+                    <a href="listaOne.html">
+                        <h2>Harry Potter y Animales Fantásticos </h2>
+                        <p>aún faltan por subir algunas películas </p>
+                    </a>
 
-                <a href="https://movidy.co/user/alejandrocmp5" class="createdbyT kcdirs">
-                    <div class="uAvatar"><img src="https://movidy.co/static/img/no-avatar.png"></div>
-                    <span>AlejandroCMP5</span>
-                </a>
-                <div class="createdbyT">
-                    <div class="uAvatar4"><i class="material-icons">favorite</i></div>
-                    <span>169</span>
-                </div>
-            </article>
-            <article>
-                <a href="listaOne.html" up-target="body">
-                    <h2>DC Películas y Series </h2>
-                    <p>aún faltan por subir películas </p>
-                </a>
+                    <a href="#" class="content-min target-content">
+                        <div class="content-img-avatar">
+                            <img src="https://i.imgur.com/1TPLM8s.jpg">
+                        </div>
+                        <span>Pittt92</span>
+                    </a>
+                    <div class="content-min">
+                        <div class="content-img-avatar-for">
+                            <i class="material-icons">favorite</i>
+                        </div>
+                        <span>174</span>
+                    </div>
+                </article>
+                <article>
+                    <a href="listaOne.html">
+                        <h2>Cronologia Universo Cinematografico De Marvel(UCM) </h2>
+                        <p>Ordenadas cronologicamente</p>
+                    </a>
 
-                <a href="https://movidy.co/user/pittt92" class="createdbyT kcdirs">
-                    <div class="uAvatar"><img src="https://i.imgur.com/1TPLM8s.jpg"></div>
-                    <span>Pittt92</span>
-                </a>
-                <div class="createdbyT">
-                    <div class="uAvatar4"><i class="material-icons">favorite</i></div>
-                    <span>134</span>
-                </div>
-            </article>
-        </div>
-            <div class="pagMovidy"><a href="listaOne.html" up-target="body">Pagina siguiente <b>2</b></a></div>
+                    <a href="#" class="content-min target-content">
+                        <div class="content-img-avatar">
+                            <img src="https://movidy.co/static/img/no-avatar.png">
+                        </div>
+                        <span>AlejandroCMP5</span>
+                    </a>
+                    <div class="content-min">
+                        <div class="content-img-avatar-for">
+                            <i class="material-icons">favorite</i>
+                        </div>
+                        <span>169</span>
+                    </div>
+                </article>
+                <article>
+                    <a href="listaOne.html">
+                        <h2>DC Películas y Series </h2>
+                        <p>aún faltan por subir películas </p>
+                    </a>
+
+                    <a href="#" class="content-min target-content">
+                        <div class="content-img-avatar">
+                            <img src="https://i.imgur.com/1TPLM8s.jpg">
+                        </div>
+                        <span>Pittt92</span>
+                    </a>
+                    <div class="content-min">
+                        <div class="content-img-avatar-for">
+                            <i class="material-icons">favorite</i>
+                        </div>
+                        <span>134</span>
+                    </div>
+                </article>
+            </div>
+            <div class="paginate">
+                <a href="#">Pagina siguiente <b>2</b></a>
+            </div>
         </div>
 
         <footer>
@@ -226,4 +261,4 @@
         </footer>
     </body>
 
-    </html>
+</html>
